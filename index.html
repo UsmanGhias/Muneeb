@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Muneeb | Flutter Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">M<span>.</span>Muneeb</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Muhammad <span>Muneeb</span></h1>
+        <h2 class="hero-title">
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </h2>
+        <p class="hero-desc">
+          Passionate Flutter developer crafting beautiful, high-performance
+          mobile applications for iOS &amp; Android from Samundri, Pakistan.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#about" class="btn btn-outline">About Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="mailto:muhammadmuneeb1061@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+923051621117" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-ring">
+          <div class="profile-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+        </div>
+        <div class="floating-badge badge-1"><i class="fab fa-flutter"></i> Flutter</div>
+        <div class="floating-badge badge-2"><i class="fab fa-android"></i> Android</div>
+        <div class="floating-badge badge-3"><i class="fab fa-apple"></i> iOS</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+    <div class="hero-particles" id="particles"></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="about-info-card">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Samundri, Pakistan</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>muhammadmuneeb1061@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+92 305 1621117</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Flutter Mobile Developer</h3>
+          <p>
+            I'm <strong>Muhammad Muneeb</strong>, a dedicated Flutter mobile application
+            developer with a passion for building elegant, user-friendly apps.
+            I specialise in creating cross-platform mobile solutions that run
+            seamlessly on both iOS and Android from a single codebase.
+          </p>
+          <p>
+            My journey in mobile development has equipped me with a deep
+            understanding of the Flutter framework, Dart language, and modern
+            mobile development best practices — from state management to API
+            integration and smooth UI animations.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span><span>+</span>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="15">0</span><span>+</span>
+              <p>Projects Done</p>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span><span>+</span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Flutter Developer</h3>
+              <span class="timeline-badge">Full Time</span>
+            </div>
+            <p class="timeline-company"><i class="fas fa-building"></i> Tech Company &mdash; Samundri, Pakistan</p>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 &ndash; Present</p>
+            <ul class="timeline-list">
+              <li>Developed and maintained cross-platform mobile applications using Flutter &amp; Dart.</li>
+              <li>Implemented state management solutions using Provider, Riverpod, and Bloc.</li>
+              <li>Integrated RESTful APIs and Firebase backend services.</li>
+              <li>Collaborated with UI/UX designers to deliver pixel-perfect interfaces.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Junior Flutter Developer</h3>
+              <span class="timeline-badge">Internship</span>
+            </div>
+            <p class="timeline-company"><i class="fas fa-building"></i> Startup Studio &mdash; Remote</p>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022 &ndash; 2023</p>
+            <ul class="timeline-list">
+              <li>Built UI components and screens for mobile applications.</li>
+              <li>Fixed bugs and optimised app performance.</li>
+              <li>Participated in code reviews and agile ceremonies.</li>
+              <li>Learned Firebase integration, push notifications, and local storage.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Freelance Mobile Developer</h3>
+              <span class="timeline-badge">Freelance</span>
+            </div>
+            <p class="timeline-company"><i class="fas fa-laptop"></i> Self-Employed &mdash; Fiverr / Upwork</p>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 &ndash; Present</p>
+            <ul class="timeline-list">
+              <li>Delivered custom Flutter applications for international clients.</li>
+              <li>Handled project planning, design, development, and deployment.</li>
+              <li>Published apps on the Google Play Store and Apple App Store.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-columns">
+
+        <!-- Column 1 -->
+        <div class="skills-column">
+          <h3 class="skills-col-title"><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="skill-icon" />
+                <span>Flutter</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" class="skill-icon" />
+                <span>Dart</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="skill-icon" />
+                <span>Android</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="iOS" class="skill-icon" />
+                <span>iOS</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-pct">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="skills-column">
+          <h3 class="skills-col-title"><i class="fas fa-server"></i> Backend &amp; Database</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="skill-icon" />
+                <span>Firebase</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon" />
+                <span>MySQL</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon" />
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="REST API" class="skill-icon" />
+                <span>REST APIs</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <span class="skill-pct">82%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="skills-column">
+          <h3 class="skills-col-title"><i class="fas fa-tools"></i> Tools &amp; Other</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" />
+                <span>Git &amp; GitHub</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon" />
+                <span>Figma</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-icon" />
+                <span>VS Code</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="skill-icon" />
+                <span>Postman</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech badges -->
+      <div class="tech-badges">
+        <span class="tech-badge"><i class="fab fa-flutter"></i> Flutter</span>
+        <span class="tech-badge"><i class="fab fa-google"></i> Firebase</span>
+        <span class="tech-badge"><i class="fab fa-android"></i> Android</span>
+        <span class="tech-badge"><i class="fab fa-apple"></i> iOS</span>
+        <span class="tech-badge"><i class="fas fa-code"></i> Dart</span>
+        <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+        <span class="tech-badge"><i class="fas fa-database"></i> SQLite</span>
+        <span class="tech-badge"><i class="fas fa-cloud"></i> REST API</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Let's Work Together</h3>
+          <p>Have a project in mind or need a Flutter developer? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:muhammadmuneeb1061@gmail.com">muhammadmuneeb1061@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+923051621117">+92 305 1621117</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <span>Samundri, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:muhammadmuneeb1061@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-success" id="formSuccess">✅ Message sent successfully! I'll get back to you soon.</p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 <span>Muhammad Muneeb</span>. Crafted with <i class="fas fa-heart"></i> in Pakistan.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
