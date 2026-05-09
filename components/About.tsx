@@ -115,7 +115,7 @@ export default function About() {
             <p className="text-[var(--text-secondary)] leading-relaxed">
               I&apos;m <strong className="text-[var(--text-primary)]">Muhammad Muneeb</strong>, a dedicated
               Flutter mobile application developer with a passion for building elegant, user-friendly apps.
-              I specialise in creating cross-platform mobile solutions that run seamlessly on both iOS and
+              I specialize in creating cross-platform mobile solutions that run seamlessly on both iOS and
               Android from a single codebase.
             </p>
 

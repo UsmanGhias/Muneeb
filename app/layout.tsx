@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Muhammad Muneeb' }],
   openGraph: {
     title: 'Muhammad Muneeb | Flutter Developer',
-    description: 'Cross-platform mobile developer specialising in Flutter & Dart.',
+    description: 'Cross-platform mobile developer specializing in Flutter & Dart.',
     type: 'website',
   },
 };
