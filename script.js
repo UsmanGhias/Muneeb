@@ -134,7 +134,7 @@ if (particleContainer) {
     p.style.opacity  = Math.random() * 0.5 + 0.1;
     p.style.animationDuration  = Math.random() * 15 + 10 + 's';
     p.style.animationDelay     = Math.random() * 10 + 's';
-    // Alternate accent colours
+    // Alternate accent colors
     p.style.background = i % 2 === 0 ? '#6c63ff' : '#00d4ff';
     particleContainer.appendChild(p);
   }
