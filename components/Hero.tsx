@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -9,7 +10,6 @@ import {
   FaLinkedin,
   FaChevronDown,
   FaMobileAlt,
-  FaUserCircle,
 } from 'react-icons/fa';
 import { SiFlutter, SiDart } from 'react-icons/si';
 
@@ -193,9 +193,15 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-8 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] flex items-center justify-center shadow-[0_0_60px_rgba(108,99,255,0.4)]"
+                className="absolute inset-8 rounded-full overflow-hidden shadow-[0_0_60px_rgba(108,99,255,0.4)]"
               >
-                <FaUserCircle className="text-white w-full h-full opacity-80 p-4" />
+                <Image
+                  src="https://github.com/user-attachments/assets/cf665ae6-5fe7-4134-b6f3-5b9e95f228b3"
+                  alt="Muhammad Muneeb"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </motion.div>
 
               {/* Floating badges */}

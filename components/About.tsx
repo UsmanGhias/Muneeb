@@ -1,8 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaUserCircle } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const stats = [
   { target: 2, label: 'Years Experience' },
@@ -79,8 +80,14 @@ export default function About() {
             {/* Avatar Ring */}
             <div className="relative w-56 h-56">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] p-1">
-                <div className="w-full h-full rounded-full bg-[var(--bg-card)] flex items-center justify-center">
-                  <FaUserCircle className="text-[var(--accent)] w-32 h-32" />
+                <div className="w-full h-full rounded-full overflow-hidden relative">
+                  <Image
+                    src="https://github.com/user-attachments/assets/cf665ae6-5fe7-4134-b6f3-5b9e95f228b3"
+                    alt="Muhammad Muneeb"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-[rgba(108,99,255,0.25)] animate-spin-slow" />
