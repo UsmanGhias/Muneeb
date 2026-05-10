@@ -7,6 +7,14 @@ const nextConfig = {
         hostname: 'github.com',
         pathname: '/user-attachments/assets/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'private-user-images.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
+      },
     ],
   },
 };
