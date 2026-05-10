@@ -82,7 +82,7 @@ export default function About() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] p-1">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
                   <Image
-                    src="https://github.com/user-attachments/assets/897d94fa-63e5-407c-9f5d-03e742607087"
+                    src="https://github.com/user-attachments/assets/216d9e2e-b54a-4375-9ab3-a7189ec4fa44"
                     alt="Muhammad Muneeb"
                     fill
                     className="object-cover"
