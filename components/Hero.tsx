@@ -196,7 +196,7 @@ export default function Hero() {
                 className="absolute inset-8 rounded-full overflow-hidden shadow-[0_0_60px_rgba(108,99,255,0.4)]"
               >
                 <Image
-                  src="https://github.com/user-attachments/assets/f0e98879-87cb-40a5-b729-b21940d02b24"
+                  src="/profile.jpeg"
                   alt="Muhammad Muneeb"
                   fill
                   className="object-cover"
