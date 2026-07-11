@@ -2,20 +2,12 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'github.com',
-        pathname: '/user-attachments/assets/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'private-user-images.githubusercontent.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'user-images.githubusercontent.com',
-      },
+      { protocol: "https", hostname: "clivora.codcrafters.org" },
+      { protocol: "https", hostname: "forgenfit.codcrafters.org" },
+      { protocol: "https", hostname: "noor-ul-haya.codcrafters.org" },
+      { protocol: "https", hostname: "codcrafters.org" },
     ],
   },
 };
+
 export default nextConfig;
