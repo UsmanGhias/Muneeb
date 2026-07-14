@@ -1,14 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaCalendarAlt, FaCode, FaEnvelope, FaUsers } from 'react-icons/fa';
+import OrbitPortrait from './OrbitPortrait';
 
 const stats = [
-  { target: 2, label: 'Years Experience' },
-  { target: 4, label: 'Production Apps' },
-  { target: 10, label: 'Happy Clients' },
+  { target: 2, label: 'Years Experience', icon: <FaCalendarAlt />, accent: 'from-[#c23bff] to-[#7537ff]' },
+  { target: 4, label: 'Production Apps', icon: <FaCode />, accent: 'from-[#00d4ff] to-[#246bff]' },
+  { target: 10, label: 'Happy Clients', icon: <FaUsers />, accent: 'from-[#20f2a0] to-[#00b886]' },
 ];
 
 function Counter({ target, inView }: { target: number; inView: boolean }) {
@@ -17,7 +17,7 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
   useEffect(() => {
     if (!inView) return;
     let start = 0;
-    const increment = target / 40;
+    const increment = target / 42;
     const timer = setInterval(() => {
       start += increment;
       if (start >= target) {
@@ -26,125 +26,76 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
       } else {
         setCount(Math.ceil(start));
       }
-    }, 40);
+    }, 35);
     return () => clearInterval(timer);
   }, [inView, target]);
 
   return <span>{count}</span>;
 }
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-};
-
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const inView = useInView(ref, { once: true, margin: '-120px' });
 
   return (
-    <section id="about" className="relative py-24 overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[var(--accent)] opacity-5 rounded-full blur-[150px] pointer-events-none" />
+    <section id="about" className="relative overflow-hidden py-24 lg:py-28">
+      <div className="about-bg absolute inset-0 pointer-events-none" />
+      <div className="wave-lines absolute inset-x-0 bottom-0 h-52 opacity-70 pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-14 text-center"
         >
-          <span className="section-tag mb-4 block">Who I Am</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)]">
+          <span className="section-tag">Who I Am</span>
+          <h2 className="mt-6 text-5xl font-black tracking-[-0.04em] text-white md:text-7xl">
             About <span className="gradient-text">Me</span>
           </h2>
-          <div className="mt-4 mx-auto w-20 h-1 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]" />
+          <div className="title-line mx-auto mt-6" />
         </motion.div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          className="grid lg:grid-cols-2 gap-16 items-center"
-        >
-          {/* Left: Avatar + Info Card */}
-          <motion.div variants={itemVariants} className="flex flex-col items-center gap-6">
-            {/* Avatar Ring */}
-            <div className="relative w-56 h-56 md:w-64 md:h-64">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] p-1">
-                <div className="w-full h-full rounded-full overflow-hidden relative shadow-[0_0_60px_rgba(108,99,255,0.4)]">
-                  <Image
-                    src="/profile.jpeg"
-                    alt="Muhammad Muneeb"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="absolute -inset-3 rounded-full border-2 border-dashed border-[rgba(108,99,255,0.25)] animate-spin-slow" />
-              {/* Status dot */}
-              <div className="absolute bottom-3 right-3 w-5 h-5 bg-green-400 rounded-full border-2 border-[var(--bg-card)] shadow-[0_0_10px_rgba(74,222,128,0.6)]" />
-            </div>
-
-            {/* Info Card */}
-            <motion.div
-              whileHover={{ y: -4 }}
-              className="glass-card w-full max-w-sm p-6 space-y-4 transition-all duration-300"
-            >
-              {[
-                { icon: <FaMapMarkerAlt className="text-[var(--accent)]" />, text: 'Samundri, Pakistan' },
-                { icon: <FaEnvelope className="text-[var(--accent2)]" />, text: 'muhammadmuneeb1061@gmail.com' },
-                { icon: <FaPhone className="text-[var(--accent)]" />, text: '+92 305 1621117' },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-3 text-[var(--text-secondary)] text-sm">
-                  <span className="text-base flex-shrink-0">{item.icon}</span>
-                  <span className="truncate">{item.text}</span>
-                </div>
-              ))}
-            </motion.div>
+        <div ref={ref} className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <motion.div
+            initial={{ opacity: 0, x: -38 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
+            <OrbitPortrait size="about" />
           </motion.div>
 
-          {/* Right: Text */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
+          <motion.div
+            initial={{ opacity: 0, x: 38 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="mx-auto max-w-3xl text-center lg:text-left"
+          >
+            <h3 className="mb-4 text-4xl font-black tracking-[-0.03em] text-white md:text-5xl">
               Flutter Mobile <span className="gradient-text">Developer</span>
             </h3>
+            <div className="mini-line mx-auto mb-6 lg:mx-0" />
 
-            <p className="text-[var(--text-secondary)] leading-relaxed">
-              I&apos;m <strong className="text-[var(--text-primary)]">Muhammad Muneeb</strong>, a dedicated
-              Flutter mobile application developer with a passion for building elegant, user-friendly apps.
-              I specialize in creating cross-platform mobile solutions that run seamlessly on both iOS and
-              Android from a single codebase.
-            </p>
+            <div className="space-y-6 text-lg leading-[1.8] text-white/72 md:text-xl">
+              <p>
+                I&apos;m <strong className="text-[var(--accent2)]">Muhammad Muneeb</strong>, a dedicated Flutter mobile application developer with a passion for building elegant, user-friendly apps. I specialise in creating cross-platform mobile solutions that run seamlessly on both iOS and Android from a single codebase.
+              </p>
+              <p>
+                At <strong className="text-[#c23bff]">CodCrafters</strong>, I build production Flutter apps including Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters, covering Islamic lifestyle, AI fitness, and business platforms with clean architecture, offline support, and polished UI.
+              </p>
+            </div>
 
-            <p className="text-[var(--text-secondary)] leading-relaxed">
-              At <strong className="text-[var(--text-primary)]">CodCrafters</strong>, I build production Flutter
-              apps including Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters, covering Islamic lifestyle,
-              AI fitness, and business platforms with clean architecture, offline support, and polished UI.
-            </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 my-8">
+            <div className="mt-9 grid gap-5 sm:grid-cols-3">
               {stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  whileHover={{ scale: 1.05 }}
-                  className="glass-card p-4 text-center cursor-default transition-all duration-300"
-                >
-                  <div className="text-3xl font-bold gradient-text">
-                    <Counter target={stat.target} inView={inView} />
-                    <span>+</span>
-                  </div>
-                  <p className="text-xs text-[var(--text-secondary)] mt-1 font-medium">{stat.label}</p>
+                <motion.div key={stat.label} whileHover={{ y: -6, scale: 1.02 }} className="about-stat-card">
+                  <span className={`about-stat-icon bg-gradient-to-br ${stat.accent}`}>{stat.icon}</span>
+                  <strong><Counter target={stat.target} inView={inView} />+</strong>
+                  <small>{stat.label}</small>
+                  <i className={`bg-gradient-to-r ${stat.accent}`} />
                 </motion.div>
               ))}
             </div>
@@ -152,14 +103,14 @@ export default function About() {
             <motion.a
               href="#contact"
               onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] hover:shadow-[0_0_30px_rgba(108,99,255,0.5)] transition-all duration-300 text-sm"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
+              className="about-cta mx-auto mt-10 lg:mx-0"
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.96 }}
             >
-              Get In Touch ✉️
+              Get In Touch <span><FaEnvelope /></span>
             </motion.a>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
