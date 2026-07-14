@@ -40,12 +40,12 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-28 lg:pt-32">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-24 sm:pt-28 lg:pt-20">
       <div className="hero-shell absolute inset-x-0 top-0 h-full pointer-events-none" />
       <div className="wave-lines absolute inset-x-0 bottom-0 h-48 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-8rem)] w-full max-w-7xl flex-col justify-center px-6 pb-16">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[96rem] flex-col justify-center px-6 pb-20 pt-10 sm:px-8 lg:px-10 lg:pb-14 lg:pt-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] xl:gap-16 2xl:gap-24">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,13 +57,13 @@ export default function Hero() {
               Available for work
             </div>
 
-            <p className="mb-3 text-lg font-bold text-[var(--accent2)]">Hello, I&apos;m</p>
-            <h1 className="mb-3 text-6xl font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-7xl xl:text-8xl">
+            <p className="mb-3 text-lg font-bold text-[var(--accent2)] xl:text-xl">Hello, I&apos;m</p>
+            <h1 className="mb-3 text-6xl font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-7xl xl:text-8xl 2xl:text-9xl">
               Muhammad<br />
               <span className="gradient-text">Muneeb</span>
             </h1>
-            <h2 className="mb-5 text-2xl font-extrabold text-[#a33dff]">UI/UX Enthusiast</h2>
-            <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-white/82 lg:mx-0">
+            <h2 className="mb-5 text-2xl font-extrabold text-[#a33dff] xl:text-3xl">UI/UX Enthusiast</h2>
+            <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-white/82 lg:mx-0 xl:text-xl">
               Passionate Flutter developer crafting beautiful, high-performance mobile applications for iOS &amp; Android from <strong className="text-white">Samundri, Pakistan.</strong>
             </p>
 
@@ -117,7 +117,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <button onClick={() => scrollTo('about')} className="scroll-cue hidden lg:flex" aria-label="Scroll to about section">
+        <button onClick={() => scrollTo('about')} className="scroll-cue hidden xl:flex" aria-label="Scroll to about section">
           <span className="mouse-icon"><FaMouse /></span>
           <span>Scroll Down</span>
           <span className="chevron">⌄</span>
