@@ -34,6 +34,7 @@ function AppIcon({ app }: { app: AppProject }) {
 function ScreenshotCarousel({ app }: { app: AppProject }) {
   const [active, setActive] = useState(0);
   const shots = app.screenshots;
+  const currentShot = shots[active] || shots[0];
 
   const prev = () => setActive((i) => (i - 1 + shots.length) % shots.length);
   const next = () => setActive((i) => (i + 1) % shots.length);
@@ -57,10 +58,11 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
                 className="absolute inset-0"
               >
                 <Image
-                  src={shots[active].src}
-                  alt={shots[active].alt}
+                  src={currentShot.src}
+                  alt={currentShot.alt}
                   fill
                   className="object-cover object-top"
+                  unoptimized={currentShot.src.endsWith('.svg')}
                   sizes="240px"
                 />
               </motion.div>
