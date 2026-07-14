@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaBuilding, FaCalendarAlt, FaLaptop, FaBriefcase } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaCode, FaMapMarkerAlt, FaRocket } from 'react-icons/fa';
 
 const experiences = [
   {
@@ -11,7 +11,7 @@ const experiences = [
     company: 'CodCrafters',
     location: 'Samundri, Pakistan',
     period: '2023 to Present',
-    icon: <FaBuilding />,
+    icon: <FaCode />,
     bullets: [
       'Built Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters, production Flutter apps for Play Store.',
       'Implemented state management with Riverpod, Hive local storage, and clean architecture.',
@@ -26,7 +26,7 @@ const experiences = [
     company: 'Startup Studio',
     location: 'Remote',
     period: '2022 to 2023',
-    icon: <FaBuilding />,
+    icon: <FaRocket />,
     bullets: [
       'Built UI components and screens for mobile applications.',
       'Fixed bugs and optimized app performance.',
@@ -41,7 +41,7 @@ const experiences = [
     company: 'Self-Employed',
     location: 'Fiverr / Upwork',
     period: '2021 to Present',
-    icon: <FaLaptop />,
+    icon: <FaBriefcase />,
     bullets: [
       'Delivered custom Flutter applications for international clients.',
       'Handled project planning, design, development, and deployment.',
@@ -63,6 +63,8 @@ const itemVariants = {
 export default function Experience() {
   return (
     <section id="experience" className="relative py-24 overflow-hidden">
+      <div className="decor-dots left-12 top-12 opacity-30" />
+      <div className="decor-dots right-12 bottom-24 opacity-25" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-[var(--accent2)] opacity-5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -74,7 +76,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="section-tag mb-4 block">My Journey</span>
+          <span className="section-tag mb-4 inline-flex items-center gap-2"><FaBriefcase /> My Journey</span>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)]">
             Work <span className="gradient-text">Experience</span>
           </h2>
@@ -109,16 +111,19 @@ export default function Experience() {
               {/* Card */}
               <motion.div
                 whileHover={{ y: -6, scale: 1.01 }}
-                className="ml-12 md:ml-0 md:w-1/2 glass-card p-6 transition-all duration-300 cursor-default"
+                className="ml-12 md:ml-0 md:w-1/2 timeline-card p-7 transition-all duration-300 cursor-default"
               >
                 {/* Header row */}
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                  <div>
+                  <div className="flex items-start gap-4">
+                    <span className="timeline-role-icon">{exp.icon}</span>
+                    <div>
                     <h3 className="text-lg font-bold text-[var(--text-primary)]">{exp.title}</h3>
                     <p className="text-[var(--text-secondary)] text-sm flex items-center gap-1.5 mt-1">
-                      <span className="text-[var(--accent)]">{exp.icon}</span>
+                      <FaMapMarkerAlt className="text-[var(--accent)]" />
                       {exp.company}, {exp.location}
                     </p>
+                    </div>
                   </div>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${exp.badgeColor} flex-shrink-0`}
