@@ -38,11 +38,11 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-120px' });
 
   return (
-    <section id="about" className="relative overflow-hidden py-24 lg:py-28">
+    <section id="about" className="relative overflow-hidden py-24 lg:py-32">
       <div className="about-bg absolute inset-0 pointer-events-none" />
       <div className="wave-lines absolute inset-x-0 bottom-0 h-52 opacity-70 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-[88rem] px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,13 +57,13 @@ export default function About() {
           <div className="title-line mx-auto mt-6" />
         </motion.div>
 
-        <div ref={ref} className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div ref={ref} className="grid items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] xl:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -38 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative"
+            className="relative lg:justify-self-start"
           >
             <OrbitPortrait size="about" />
           </motion.div>

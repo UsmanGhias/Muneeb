@@ -55,19 +55,24 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <motion.a
             href="#home"
             onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
-            className="text-xl font-bold text-[var(--text-primary)]"
+            className="group flex min-w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] py-2 pl-2 pr-4 text-[var(--text-primary)] shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[rgba(0,212,255,0.35)]"
             whileHover={{ scale: 1.05 }}
           >
-            M<span className="gradient-text">.</span>Muneeb
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] text-base font-black text-white shadow-[0_0_22px_rgba(0,212,255,0.32)]">
+              M
+            </span>
+            <span className="text-lg font-black tracking-[-0.03em] sm:text-xl">
+              M<span className="gradient-text">.</span>Muneeb
+            </span>
           </motion.a>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden items-center gap-5 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur-md lg:flex xl:gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -95,7 +100,7 @@ export default function Navbar() {
           <motion.a
             href="#contact"
             onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-            className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] hover:shadow-[0_0_20px_rgba(108,99,255,0.5)] transition-all duration-300"
+            className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(108,99,255,0.5)] lg:flex"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -104,7 +109,7 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <motion.button
-            className="md:hidden text-[var(--text-primary)] p-2 rounded-lg"
+            className="rounded-lg p-2 text-[var(--text-primary)] lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
@@ -122,7 +127,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 right-0 bottom-0 w-72 z-40 bg-[#12121f]/98 backdrop-blur-xl border-l border-[rgba(108,99,255,0.2)] shadow-2xl flex flex-col pt-24 px-8 gap-4"
+            className="fixed bottom-0 right-0 top-0 z-40 flex w-72 flex-col gap-4 border-l border-[rgba(108,99,255,0.2)] bg-[#12121f]/98 px-8 pt-24 shadow-2xl backdrop-blur-xl"
           >
             {navLinks.map((link, i) => (
               <motion.a
@@ -162,7 +167,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 bg-black/60 md:hidden"
+            className="fixed inset-0 z-30 bg-black/60 lg:hidden"
             onClick={() => setMobileOpen(false)}
           />
         )}

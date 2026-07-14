@@ -15,7 +15,9 @@ interface OrbitPortraitProps {
 }
 
 export default function OrbitPortrait({ badges = [], showLocation = false, size = 'hero' }: OrbitPortraitProps) {
-  const dimensions = size === 'hero' ? 'w-[19rem] h-[19rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem] 2xl:w-[36rem] 2xl:h-[36rem]' : 'w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem]';
+  const dimensions = size === 'hero'
+    ? 'w-[19rem] h-[19rem] sm:w-[24rem] sm:h-[24rem] lg:w-[29rem] lg:h-[29rem] xl:w-[32rem] xl:h-[32rem] 2xl:w-[35rem] 2xl:h-[35rem]'
+    : 'w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[28rem] lg:h-[28rem] xl:w-[31rem] xl:h-[31rem]';
 
   return (
     <div className={`orbit-stage relative mx-auto ${dimensions}`}>
@@ -33,9 +35,9 @@ export default function OrbitPortrait({ badges = [], showLocation = false, size 
             src="/profile.jpeg"
             alt="Muhammad Muneeb"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[center_38%]"
             priority
-            sizes="(max-width: 768px) 70vw, 36vw"
+            sizes={size === 'hero' ? '(max-width: 768px) 70vw, (max-width: 1280px) 34vw, 32rem' : '(max-width: 768px) 70vw, (max-width: 1280px) 32vw, 31rem'}
           />
         </div>
       </div>
