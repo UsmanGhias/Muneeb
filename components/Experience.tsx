@@ -10,10 +10,10 @@ const experiences = [
     badgeColor: 'from-[var(--accent)] to-[var(--accent2)]',
     company: 'CodCrafters',
     location: 'Samundri, Pakistan',
-    period: '2023 – Present',
+    period: '2023 to Present',
     icon: <FaBuilding />,
     bullets: [
-      'Built Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters — production Flutter apps for Play Store.',
+      'Built Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters, production Flutter apps for Play Store.',
       'Implemented state management with Riverpod, Hive local storage, and clean architecture.',
       'Integrated REST APIs, Firebase, offline sync, and push notifications.',
       'Delivered pixel-perfect UIs with Material 3, animations, and platform-adaptive widgets.',
@@ -25,7 +25,7 @@ const experiences = [
     badgeColor: 'from-purple-500 to-pink-500',
     company: 'Startup Studio',
     location: 'Remote',
-    period: '2022 – 2023',
+    period: '2022 to 2023',
     icon: <FaBuilding />,
     bullets: [
       'Built UI components and screens for mobile applications.',
@@ -40,7 +40,7 @@ const experiences = [
     badgeColor: 'from-emerald-500 to-teal-500',
     company: 'Self-Employed',
     location: 'Fiverr / Upwork',
-    period: '2021 – Present',
+    period: '2021 to Present',
     icon: <FaLaptop />,
     bullets: [
       'Delivered custom Flutter applications for international clients.',
@@ -117,7 +117,7 @@ export default function Experience() {
                     <h3 className="text-lg font-bold text-[var(--text-primary)]">{exp.title}</h3>
                     <p className="text-[var(--text-secondary)] text-sm flex items-center gap-1.5 mt-1">
                       <span className="text-[var(--accent)]">{exp.icon}</span>
-                      {exp.company} — {exp.location}
+                      {exp.company}, {exp.location}
                     </p>
                   </div>
                   <span
