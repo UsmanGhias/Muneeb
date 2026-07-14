@@ -429,7 +429,7 @@ input:focus, textarea:focus {
 .scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: 1.4rem;
+  bottom: 2rem;
   transform: translateX(-50%);
   align-items: center;
   gap: 1rem;
@@ -470,5 +470,39 @@ input:focus, textarea:focus {
 
   .about-cta {
     min-width: 100%;
+  }
+}
+
+
+@media (min-width: 1536px) {
+  .availability-pill {
+    font-size: 1rem;
+  }
+
+  .primary-cta,
+  .secondary-cta {
+    min-height: 4rem;
+    font-size: 1rem;
+  }
+
+  .social-orb {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+
+  .stat-mini {
+    min-height: 6.4rem;
+  }
+
+  .stat-mini strong {
+    font-size: 1.45rem;
+  }
+
+  .stat-mini small {
+    font-size: 0.85rem;
+  }
+
+  .tech-badge {
+    font-size: 1.15rem;
   }
 }

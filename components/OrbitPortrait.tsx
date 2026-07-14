@@ -15,7 +15,7 @@ interface OrbitPortraitProps {
 }
 
 export default function OrbitPortrait({ badges = [], showLocation = false, size = 'hero' }: OrbitPortraitProps) {
-  const dimensions = size === 'hero' ? 'w-[19rem] h-[19rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem]' : 'w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem]';
+  const dimensions = size === 'hero' ? 'w-[19rem] h-[19rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem] 2xl:w-[36rem] 2xl:h-[36rem]' : 'w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[31rem] lg:h-[31rem]';
 
   return (
     <div className={`orbit-stage relative mx-auto ${dimensions}`}>
