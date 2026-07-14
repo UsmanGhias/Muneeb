@@ -128,7 +128,7 @@ export default function About() {
 
             <p className="text-[var(--text-secondary)] leading-relaxed">
               At <strong className="text-[var(--text-primary)]">CodCrafters</strong>, I build production Flutter
-              apps including Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters — covering Islamic lifestyle,
+              apps including Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters, covering Islamic lifestyle,
               AI fitness, and business platforms with clean architecture, offline support, and polished UI.
             </p>
 

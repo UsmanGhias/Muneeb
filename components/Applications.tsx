@@ -250,7 +250,7 @@ export default function Applications() {
             Flutter <span className="gradient-text">Applications</span>
           </h2>
           <p className="mt-4 text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Four production Flutter apps built at CodCrafters — spanning Islamic lifestyle, fitness, and business platforms.
+            Four production Flutter apps built at CodCrafters, spanning Islamic lifestyle, fitness, and business platforms.
           </p>
           <div className="mt-4 mx-auto w-20 h-1 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]" />
         </motion.div>
