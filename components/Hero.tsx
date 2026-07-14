@@ -40,12 +40,12 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24 sm:pt-28 lg:pt-20">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-28 sm:pt-32 lg:pt-24">
       <div className="hero-shell absolute inset-x-0 top-0 h-full pointer-events-none" />
       <div className="wave-lines absolute inset-x-0 bottom-0 h-48 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[96rem] flex-col justify-center px-6 pb-20 pt-10 sm:px-8 lg:px-10 lg:pb-14 lg:pt-16">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] xl:gap-16 2xl:gap-24">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[96rem] flex-col justify-center px-6 pb-20 pt-8 sm:px-8 lg:px-10 lg:pb-14 lg:pt-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.03fr_0.97fr] xl:gap-14 2xl:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function Hero() {
             </div>
 
             <p className="mb-3 text-lg font-bold text-[var(--accent2)] xl:text-xl">Hello, I&apos;m</p>
-            <h1 className="mb-3 text-6xl font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-7xl xl:text-8xl 2xl:text-9xl">
+            <h1 className="mb-3 text-6xl font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-7xl xl:text-[5.8rem] 2xl:text-9xl">
               Muhammad<br />
               <span className="gradient-text">Muneeb</span>
             </h1>
@@ -111,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative"
+            className="relative lg:justify-self-end"
           >
             <OrbitPortrait badges={badges} showLocation />
           </motion.div>
