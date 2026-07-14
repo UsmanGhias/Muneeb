@@ -11,6 +11,10 @@ import {
   FaPaperPlane,
   FaCheckCircle,
   FaSpinner,
+  FaCopy,
+  FaUser,
+  FaFileAlt,
+  FaCommentDots,
 } from 'react-icons/fa';
 
 const contactDetails = [
@@ -43,9 +47,16 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 export default function Contact() {
   const [form, setForm] = useState<FormData>({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<FormStatus>('idle');
+  const [copied, setCopied] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const copyToClipboard = async (value: string, label: string) => {
+    await navigator.clipboard.writeText(value);
+    setCopied(label);
+    setTimeout(() => setCopied(null), 1800);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -59,6 +70,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-24 overflow-hidden">
+      <div className="decor-rings -left-24 bottom-0 opacity-40" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--accent)] opacity-5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -70,14 +82,14 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="section-tag mb-4 block">Get In Touch</span>
+          <span className="section-tag mb-4 inline-flex items-center gap-2">Get In Touch</span>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)]">
             Contact <span className="gradient-text">Me</span>
           </h2>
           <div className="mt-4 mx-auto w-20 h-1 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
           {/* Left: Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -101,7 +113,7 @@ export default function Contact() {
                 <motion.div
                   key={item.label}
                   whileHover={{ x: 6 }}
-                  className="flex items-center gap-4 glass-card p-4 transition-all duration-300"
+                  className="contact-info-card flex items-center gap-4 p-4 transition-all duration-300"
                 >
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-lg flex-shrink-0"
@@ -109,25 +121,33 @@ export default function Contact() {
                   >
                     {item.icon}
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-xs text-[var(--text-secondary)] font-medium uppercase tracking-wider">{item.label}</p>
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-[var(--text-primary)] text-sm font-medium hover:text-[var(--accent)] transition-colors"
+                        className="text-[var(--text-primary)] text-sm font-semibold hover:text-[var(--accent)] transition-colors break-all"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <span className="text-[var(--text-primary)] text-sm font-medium">{item.value}</span>
+                      <span className="text-[var(--text-primary)] text-sm font-semibold">{item.value}</span>
                     )}
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(item.value, item.label)}
+                    className="copy-button"
+                    aria-label={`Copy ${item.label}`}
+                  >
+                    {copied === item.label ? <FaCheckCircle /> : <FaCopy />}
+                  </button>
                 </motion.div>
               ))}
             </div>
 
             {/* Socials */}
-            <div className="flex gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2"><span className="text-[var(--text-secondary)] text-sm mr-2">Let&apos;s connect on</span>
               {[
                 { icon: <FaGithub />, href: 'https://github.com/usmanghias/muneeb', label: 'GitHub' },
                 { icon: <FaLinkedin />, href: 'https://linkedin.com/', label: 'LinkedIn' },
@@ -156,14 +176,15 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-8 space-y-5">
+            <form onSubmit={handleSubmit} className="contact-form-card p-8 grid lg:grid-cols-2 gap-5">
               {[
-                { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Your full name' },
-                { id: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
-                { id: 'subject', label: 'Subject', type: 'text', placeholder: 'Project inquiry' },
+                { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Your full name', icon: <FaUser /> },
+                { id: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com', icon: <FaEnvelope /> },
+                { id: 'subject', label: 'Subject', type: 'text', placeholder: 'Project inquiry', icon: <FaFileAlt /> },
               ].map((field) => (
-                <div key={field.id}>
-                  <label htmlFor={field.id} className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5 uppercase tracking-wider">
+                <div key={field.id} className={field.id === 'subject' ? 'lg:col-span-2' : undefined}>
+                  <label htmlFor={field.id} className="flex items-center gap-2 text-sm font-semibold text-[var(--text-primary)] mb-3">
+                    <span className="text-[var(--accent2)]">{field.icon}</span>
                     {field.label}
                   </label>
                   <input
@@ -174,31 +195,34 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder={field.placeholder}
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-[rgba(10,10,20,0.6)] border border-[rgba(108,99,255,0.2)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] text-sm transition-all duration-200 focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.15)]"
+                    className="w-full px-4 py-4 rounded-xl bg-[rgba(10,10,20,0.6)] border border-[rgba(108,99,255,0.2)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] text-sm transition-all duration-200 focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.15)]"
                   />
                 </div>
               ))}
 
-              <div>
-                <label htmlFor="message" className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5 uppercase tracking-wider">
+              <div className="lg:col-span-2">
+                <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-[var(--text-primary)] mb-3">
+                  <span className="text-[var(--accent2)]"><FaCommentDots /></span>
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={6}
+                  maxLength={500}
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell me about your project..."
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-[rgba(10,10,20,0.6)] border border-[rgba(108,99,255,0.2)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] text-sm resize-none transition-all duration-200 focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.15)]"
+                  className="w-full px-4 py-4 rounded-xl bg-[rgba(10,10,20,0.6)] border border-[rgba(108,99,255,0.2)] text-[var(--text-primary)] placeholder-[var(--text-secondary)] text-sm resize-none transition-all duration-200 focus:border-[var(--accent)] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.15)]"
                 />
+                <p className="mt-1 text-right text-xs text-[var(--text-secondary)]">{form.message.length}/500</p>
               </div>
 
               <motion.button
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className="w-full py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] hover:shadow-[0_0_30px_rgba(108,99,255,0.5)] disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2 text-sm"
+                className="lg:col-span-2 w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] hover:shadow-[0_0_30px_rgba(108,99,255,0.5)] disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2 text-sm"
                 whileHover={{ scale: status === 'idle' ? 1.02 : 1 }}
                 whileTap={{ scale: status === 'idle' ? 0.98 : 1 }}
               >
@@ -212,7 +236,7 @@ export default function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-center text-green-400 text-sm font-medium"
+                  className="lg:col-span-2 text-center text-green-400 text-sm font-medium"
                 >
                   ✅ Message sent successfully! I&apos;ll get back to you soon.
                 </motion.p>

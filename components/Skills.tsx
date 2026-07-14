@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaMobileAlt, FaServer, FaTools } from 'react-icons/fa';
+import { FaBrain, FaMobileAlt, FaServer, FaTools } from 'react-icons/fa';
 import Image from 'next/image';
 
 type Skill = { name: string; pct: number; icon: string };
@@ -32,7 +32,7 @@ const skillGroups: { title: string; icon: React.ReactNode; skills: Skill[] }[] =
     title: 'Tools & Other',
     icon: <FaTools />,
     skills: [
-      { name: 'Git & GitHub', pct: 88, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+      { name: 'Git & GitHub', pct: 86, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       { name: 'Figma', pct: 72, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
       { name: 'VS Code', pct: 95, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
       { name: 'Postman', pct: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
@@ -89,6 +89,8 @@ export default function Skills() {
 
   return (
     <section id="skills" className="relative py-24 overflow-hidden">
+      <div className="decor-dots left-8 top-12 opacity-40" />
+      <div className="decor-rings right-0 top-0 opacity-60" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-64 bg-[var(--accent)] opacity-5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -100,7 +102,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="section-tag mb-4 block">What I Know</span>
+          <span className="section-tag mb-4 inline-flex items-center gap-2"><FaBrain /> What I Know</span>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)]">
             Skills &amp; <span className="gradient-text">Technologies</span>
           </h2>
@@ -121,10 +123,10 @@ export default function Skills() {
               key={group.title}
               variants={cardVariants}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="glass-card p-6 transition-all duration-300"
+              className="skill-card p-7 transition-all duration-300"
             >
               <h3 className="flex items-center gap-2 text-base font-bold text-[var(--text-primary)] mb-6">
-                <span className="gradient-text text-lg">{group.icon}</span>
+                <span className="skill-heading-icon">{group.icon}</span>
                 {group.title}
               </h3>
               {group.skills.map((skill) => (
@@ -150,7 +152,7 @@ export default function Skills() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
               whileHover={{ scale: 1.1, y: -2 }}
-              className="px-4 py-2 rounded-full text-sm font-medium text-[var(--text-secondary)] border border-[rgba(108,99,255,0.25)] bg-[rgba(108,99,255,0.05)] hover:border-[var(--accent)] hover:text-[var(--accent)] hover:shadow-[0_0_15px_rgba(108,99,255,0.3)] transition-all duration-300 cursor-default"
+              className="tech-pill px-4 py-2 rounded-full text-sm font-medium text-[var(--text-secondary)] transition-all duration-300 cursor-default"
             >
               {badge}
             </motion.span>
