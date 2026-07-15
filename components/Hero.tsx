@@ -31,7 +31,7 @@ const socials = [
 
 const documentLinks = [
   { href: '/docs/muhammad-muneeb-portfolio-showcase.pdf', label: 'Portfolio PDF' },
-  { href: '/docs/muhammad-muneeb-resume.pdf', label: 'Resume PDF' },
+  { href: '/resume', label: 'Resume Link' },
 ];
 
 const badges = [
