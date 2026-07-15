@@ -112,25 +112,4 @@ const portfolioPages = [
   ])),
 ];
 
-const resumePages = [[
-  ...header,
-  { text: 'Professional Summary', size: 15, bold: true },
-  { text: 'Flutter developer building elegant, high performance mobile applications for Android and iOS from one codebase. Experienced with production apps, offline support, clean architecture, API integration, local databases, and polished interfaces.', size: 11 },
-  { gap: 12 },
-  { text: 'Experience', size: 15, bold: true },
-  { text: 'Flutter Developer | CodCrafters | Samundri, Pakistan | 2023 to Present', size: 11, bold: true },
-  { text: 'Built Noor Ul Haya, ForgeNFit, Clivora, and CODCrafters as production Flutter apps. Implemented Riverpod state management, Hive storage, REST APIs, Firebase, offline sync, push notifications, Material 3 UI, and platform adaptive widgets.', size: 10 },
-  { text: 'Junior Flutter Developer | Startup Studio | Remote | 2022 to 2023', size: 11, bold: true },
-  { text: 'Built mobile UI components, fixed bugs, improved app performance, joined code reviews, and learned Firebase integration, push notifications, and local storage.', size: 10 },
-  { text: 'Freelance Mobile Developer | Fiverr and Upwork | 2021 to Present', size: 11, bold: true },
-  { text: 'Delivered custom Flutter applications for international clients, handled planning, design, development, deployment, and app store publishing.', size: 10 },
-  { gap: 12 },
-  { text: 'Skills', size: 15, bold: true },
-  { text: 'Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Android, iOS, Material 3, local notifications, offline sync, MySQL, MongoDB, Git, GitHub, Figma, VS Code, Postman.', size: 10 },
-  { gap: 12 },
-  { text: 'Selected Projects', size: 15, bold: true },
-  ...apps.map((app) => ({ text: `${app.name}: ${app.tagline}. ${app.website}`, size: 10, max: 90 })),
-]];
-
 buildPdf('public/docs/muhammad-muneeb-portfolio-showcase.pdf', portfolioPages);
-buildPdf('public/docs/muhammad-muneeb-resume.pdf', resumePages);
