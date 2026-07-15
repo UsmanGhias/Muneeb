@@ -9,7 +9,6 @@ import {
   FaLinkedin,
   FaMouse,
   FaPhone,
-  FaFilePdf,
   FaUser,
 } from 'react-icons/fa';
 import { SiDart, SiFlutter } from 'react-icons/si';
@@ -27,11 +26,6 @@ const socials = [
   { icon: <FaPhone />, href: 'tel:+923051621117', label: 'Phone' },
   { icon: <FaGithub />, href: 'https://github.com/usmanghias/muneeb', label: 'GitHub' },
   { icon: <FaLinkedin />, href: 'https://linkedin.com/', label: 'LinkedIn' },
-];
-
-const documentLinks = [
-  { href: '/docs/muhammad-muneeb-portfolio-showcase.pdf', label: 'Portfolio PDF' },
-  { href: '/resume', label: 'Resume Link' },
 ];
 
 const badges = [
@@ -98,21 +92,6 @@ export default function Hero() {
               {socials.map((social) => (
                 <a key={social.label} href={social.href} target={social.href.startsWith('http') ? '_blank' : undefined} rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={social.label} className="social-orb">
                   {social.icon}
-                </a>
-              ))}
-            </div>
-
-            <div className="mb-7 flex flex-wrap justify-center gap-3 lg:justify-start">
-              {documentLinks.map((documentLink) => (
-                <a
-                  key={documentLink.href}
-                  href={documentLink.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,212,255,0.35)] bg-white/[0.04] px-4 py-2 text-sm font-bold text-white/86 shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-300 hover:border-[var(--accent2)] hover:text-[var(--accent2)]"
-                >
-                  <FaFilePdf />
-                  {documentLink.label}
                 </a>
               ))}
             </div>
