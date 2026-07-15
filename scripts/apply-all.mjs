@@ -49,7 +49,7 @@ const featureModules = {
       { title: "Command Center", description: "Revenue, outstanding invoices and active projects at a glance.", icon: "📊" },
       { title: "Client CRM", description: "Full client database with search, notes and contact management.", icon: "👤" },
       { title: "Invoicing", description: "Tax, discounts, and branded PDF export workflow.", icon: "📄" },
-      { title: "CLIVORA Connect", description: "Private marketplace — contact hidden until mutual accept.", icon: "🔗" },
+      { title: "CLIVORA Connect", description: "Private marketplace - contact hidden until mutual accept.", icon: "🔗" },
       { title: "CLIVORA AI", description: "Local business insights, follow-ups and revenue alerts.", icon: "✨" },
       { title: "File Vault", description: "Secure on-device storage for project assets.", icon: "🔒" },
     ],`,
@@ -79,7 +79,7 @@ if (!portfolio.includes("expertiseDomains")) {
     title: "Islamic & Lifestyle Apps",
     subtitle: "Noor Ul Haya",
     description:
-      "Serene Material 3 experiences for worship — prayer engines, offline content, exact alarms, and privacy-first architecture.",
+      "Serene Material 3 experiences for worship - prayer engines, offline content, exact alarms, and privacy-first architecture.",
     accent: "#10b981",
     skills: ["Adhan Dart", "Hive", "Exact Alarms", "Material 3", "GoRouter"],
   },
@@ -95,7 +95,7 @@ if (!portfolio.includes("expertiseDomains")) {
     title: "Business OS & Marketplaces",
     subtitle: "Clivora",
     description:
-      "Freelancer operating systems — CRM, invoicing, 19 tools, private marketplaces, and PDF generation on mobile.",
+      "Freelancer operating systems - CRM, invoicing, 19 tools, private marketplaces, and PDF generation on mobile.",
     accent: "#6366f1",
     skills: ["SQLite", "PDF Engine", "Play Billing", "CRM", "Local-First"],
   },
@@ -103,7 +103,7 @@ if (!portfolio.includes("expertiseDomains")) {
     title: "Studio-Grade Products",
     subtitle: "CODCrafters",
     description:
-      "Production Flutter across 25+ countries — reusable architecture, ERP integration, and deployment at scale.",
+      "Production Flutter across 25+ countries - reusable architecture, ERP integration, and deployment at scale.",
     accent: "#0b6db4",
     skills: ["Clean Architecture", "Firebase", "Odoo ERP", "CI/CD", "Multi-App"],
   },
@@ -171,7 +171,7 @@ export default function Applications() {
           tag="Featured Work"
           title="Production"
           highlight="Applications"
-          description="Four Flutter applications spanning Islamic lifestyle, AI fitness, business operating systems, and studio products — engineered for Google Play launch."
+          description="Four Flutter applications spanning Islamic lifestyle, AI fitness, business operating systems, and studio products - engineered for Google Play launch."
         />
 
         <div className="space-y-32">
@@ -528,7 +528,7 @@ function AppLinks({ app }: { app: AppProject }) {
           className="btn-secondary text-xs"
         >
           <FaGooglePlay size={14} />
-          {app.playStoreStatus === "launching" ? "Google Play — Launching" : "Google Play"}
+          {app.playStoreStatus === "launching" ? "Google Play - Launching" : "Google Play"}
         </a>
       )}
       {app.github && (
@@ -645,7 +645,7 @@ export default function Expertise() {
           tag="Technical Mastery"
           title="Flutter"
           highlight="Expertise"
-          description="Deep specialization across architecture, state, offline data, platform delivery, and production-grade UI — proven across four shipped CodCrafters applications."
+          description="Deep specialization across architecture, state, offline data, platform delivery, and production-grade UI - proven across four shipped CodCrafters applications."
         />
 
         {/* Metrics strip */}

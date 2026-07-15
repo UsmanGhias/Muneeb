@@ -7,7 +7,7 @@ const clivoraModules = `    featureModules: [
       { title: "Command Center", description: "Revenue, outstanding invoices and active projects at a glance.", icon: "📊" },
       { title: "Client CRM", description: "Full client database with search, notes and contact management.", icon: "👤" },
       { title: "Invoicing", description: "Tax, discounts, and branded PDF export workflow.", icon: "📄" },
-      { title: "CLIVORA Connect", description: "Private marketplace — contact hidden until mutual accept.", icon: "🔗" },
+      { title: "CLIVORA Connect", description: "Private marketplace - contact hidden until mutual accept.", icon: "🔗" },
       { title: "CLIVORA AI", description: "Local business insights, follow-ups and revenue alerts.", icon: "✨" },
       { title: "File Vault", description: "Secure on-device storage for project assets.", icon: "🔒" },
     ],`;

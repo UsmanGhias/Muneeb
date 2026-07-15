@@ -65,9 +65,9 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
                   src={currentShot.src}
                   alt={currentShot.alt}
                   fill
-                  className="object-cover object-top"
-                  unoptimized={currentShot.src.endsWith('.svg')}
-                  sizes="240px"
+                  className="object-contain object-center bg-black"
+                  unoptimized
+                  sizes="(min-width: 768px) 270px, 235px"
                 />
               </motion.div>
             </AnimatePresence>
@@ -148,7 +148,7 @@ function AppLinks({ app }: { app: AppProject }) {
           className="inline-flex items-center gap-3 px-7 py-3.5 rounded-[1.25rem] text-base font-bold border border-[var(--accent)] text-[var(--accent)] bg-[#080817]/50 hover:bg-[var(--accent)] hover:text-white transition-all duration-300"
         >
           <FaGooglePlay size={14} />
-          {app.playStoreStatus === 'launching' ? 'Google Play · Launching' : 'Google Play'}
+          {app.playStoreStatus === 'launching' ? 'Google Play - Launching' : 'Google Play'}
         </a>
       )}
     </div>

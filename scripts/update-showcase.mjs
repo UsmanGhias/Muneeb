@@ -27,7 +27,7 @@ await download(
 const portfolioPath = path.join(root, "src/data/portfolio.ts");
 let portfolio = fs.readFileSync(portfolioPath, "utf8");
 
-// Strip fake screenshot entries — only keep files that exist on disk
+// Strip fake screenshot entries - only keep files that exist on disk
 function existingScreens(appId, shots) {
   return shots.filter((s) => {
     const file = path.join(root, "public", s.src.replace(/^\//, ""));
@@ -41,7 +41,7 @@ portfolio = portfolio.replace(
     name: "Noor Ul Haya",
     tagline: "Light for your sacred rhythm",
     description:
-      "Your daily Islamic companion — accurate prayer times, Quran, Qibla, authentic Duas, and a digital Tasbih. Built with Material 3 for a serene, offline-capable experience with no accounts and no ads.",
+      "Your daily Islamic companion - accurate prayer times, Quran, Qibla, authentic Duas, and a digital Tasbih. Built with Material 3 for a serene, offline-capable experience with no accounts and no ads.",
     category: "Lifestyle · Islamic",
     accent: "#10b981",
     accentSecondary: "#059669",
@@ -58,7 +58,7 @@ portfolio = portfolio.replace(
     platform: "Android 7.0+",
     features: [
       "Live Adhan calculations with Hijri dates & sunrise times",
-      "Per-salah alarms — 15 minutes before each Adhan",
+      "Per-salah alarms - 15 minutes before each Adhan",
       "Real-time Qibla compass with turn-by-turn guidance",
       "Full Quran reader with Arabic names & verse counts",
       "Hadith-backed Duas library with transliteration",
@@ -70,7 +70,7 @@ portfolio = portfolio.replace(
       "Guided onboarding in three serene steps",
       "Calm splash & brand-first impression",
       "Offline-capable after first setup",
-      "Privacy-first — no accounts, no ads",
+      "Privacy-first - no accounts, no ads",
     ],
     techStack: [
       "Flutter 3.8+",
@@ -96,12 +96,12 @@ portfolio = portfolio.replace(
       {
         challenge: "Accurate prayer times across regions & scholarly methods",
         solution:
-          "Integrated Adhan Dart engine with UIS, MWL, and multiple calculation methods — user-selectable per location.",
+          "Integrated Adhan Dart engine with UIS, MWL, and multiple calculation methods - user-selectable per location.",
       },
       {
         challenge: "Full offline experience for worship content",
         solution:
-          "Bundled Quran, Duas, and Tasbih locally with Hive-backed preferences — zero network after first setup.",
+          "Bundled Quran, Duas, and Tasbih locally with Hive-backed preferences - zero network after first setup.",
       },
     ],
     stats: [
@@ -127,7 +127,7 @@ portfolio = portfolio.replace(
     name: "Clivora",
     tagline: "Connect marketplace + business OS",
     description:
-      "A cloud-first business operating system for freelancers and agencies — private Connect marketplace, CRM, projects, invoicing, and 19 integrated tools on web and Android with one account.",
+      "A cloud-first business operating system for freelancers and agencies - private Connect marketplace, CRM, projects, invoicing, and 19 integrated tools on web and Android with one account.",
     category: "Business · Productivity",
     accent: "#6366f1",
     accentSecondary: "#4f46e5",
@@ -148,9 +148,9 @@ portfolio = portfolio.replace(
       "Projects, time tracking & budgets",
       "Professional invoicing with branded PDF export",
       "CLIVORA Connect private freelancer marketplace",
-      "CLIVORA AI — local business insights",
+      "CLIVORA AI - local business insights",
       "Expense tracking across 11 categories",
-      "Offline-first — data stays on device",
+      "Offline-first - data stays on device",
     ],
     uxHighlights: [
       "Morning dashboard saves 30+ minutes daily",
@@ -177,17 +177,17 @@ portfolio = portfolio.replace(
       {
         challenge: "19 business tools in one cohesive mobile experience",
         solution:
-          "Architected feature-first modules with shared design system and navigation shell — each tool feels native yet part of one OS.",
+          "Architected feature-first modules with shared design system and navigation shell - each tool feels native yet part of one OS.",
       },
       {
         challenge: "Private marketplace without exposing contact details",
         solution:
-          "Built Connect request flow with mutual-accept gate — emails hidden until both parties agree, then auto-populate CRM.",
+          "Built Connect request flow with mutual-accept gate - emails hidden until both parties agree, then auto-populate CRM.",
       },
       {
         challenge: "Branded PDF invoice generation on mobile",
         solution:
-          "Implemented on-device PDF engine with Classic, Modern & Minimal templates — logo upload and 8 accent colors.",
+          "Implemented on-device PDF engine with Classic, Modern & Minimal templates - logo upload and 8 accent colors.",
       },
     ],
     stats: [
@@ -199,8 +199,8 @@ portfolio = portfolio.replace(
       { title: "Command Center", description: "Revenue, outstanding invoices & active projects at a glance.", icon: "📊" },
       { title: "Client CRM", description: "Full client database with search, notes & contact management.", icon: "👤" },
       { title: "Invoicing", description: "Tax, discounts, draft/sent/paid workflow with PDF export.", icon: "📄" },
-      { title: "CLIVORA Connect", description: "Private marketplace — contact hidden until mutual accept.", icon: "🔗" },
-      { title: "CLIVORA AI", description: "Smart insights from local data — follow-ups & revenue alerts.", icon: "✨" },
+      { title: "CLIVORA Connect", description: "Private marketplace - contact hidden until mutual accept.", icon: "🔗" },
+      { title: "CLIVORA AI", description: "Smart insights from local data - follow-ups & revenue alerts.", icon: "✨" },
       { title: "File Vault", description: "Secure on-device storage for project assets & documents.", icon: "🔒" },
     ],
     screenshots: [],
@@ -213,7 +213,7 @@ portfolio = portfolio.replace(
     name: "CODCrafters",
     tagline: "Your vision, our code",
     description:
-      "The official CodCrafters mobile app — discover our Flutter portfolio, request custom software quotes, explore ERP & AI solutions, and connect directly with the development team behind 185+ delivered projects.",
+      "The official CodCrafters mobile app - discover our Flutter portfolio, request custom software quotes, explore ERP & AI solutions, and connect directly with the development team behind 185+ delivered projects.",
     category: "Business · Studio",
     accent: "#0b6db4",
     accentSecondary: "#0981b2",
@@ -262,17 +262,17 @@ portfolio = portfolio.replace(
       {
         challenge: "Delivering flagship products across diverse domains",
         solution:
-          "Established reusable Flutter architecture templates — Islamic, fitness, business OS apps share core patterns while staying domain-specific.",
+          "Established reusable Flutter architecture templates - Islamic, fitness, business OS apps share core patterns while staying domain-specific.",
       },
       {
         challenge: "Maintaining quality across 185+ delivered projects",
         solution:
-          "Built standardized code review, testing, and deployment workflows — every app ships with consistent engineering standards.",
+          "Built standardized code review, testing, and deployment workflows - every app ships with consistent engineering standards.",
       },
       {
         challenge: "Cross-platform parity between Android and iOS",
         solution:
-          "Flutter-first approach with platform-adaptive widgets — native feel on both stores from a single Dart codebase.",
+          "Flutter-first approach with platform-adaptive widgets - native feel on both stores from a single Dart codebase.",
       },
     ],
     stats: [
@@ -286,7 +286,7 @@ portfolio = portfolio.replace(
       { title: "Odoo ERP", description: "Business automation, accounting & inventory modules.", icon: "🏭" },
       { title: "AI & ML", description: "Intelligent products with modern AI integration.", icon: "🤖" },
       { title: "Case Studies", description: "Real results from 185+ completed engagements.", icon: "📈" },
-      { title: "Get a Quote", description: "Direct line to the team — free consultation.", icon: "💬" },
+      { title: "Get a Quote", description: "Direct line to the team - free consultation.", icon: "💬" },
     ],
     screenshots: [],
   },`
@@ -330,7 +330,7 @@ export const expertiseDomains = [
     title: "Islamic & Lifestyle Apps",
     subtitle: "Noor Ul Haya",
     description:
-      "Serene Material 3 experiences for worship — prayer engines, offline content, exact alarms, and privacy-first architecture with zero accounts.",
+      "Serene Material 3 experiences for worship - prayer engines, offline content, exact alarms, and privacy-first architecture with zero accounts.",
     accent: "#10b981",
     skills: ["Adhan Dart", "Hive Offline", "Exact Alarms", "Material 3", "GoRouter"],
   },
@@ -346,7 +346,7 @@ export const expertiseDomains = [
     title: "Business OS & Marketplaces",
     subtitle: "Clivora",
     description:
-      "Full-stack freelancer operating systems — CRM, invoicing, 19 business tools, private marketplaces, and branded PDF generation on mobile.",
+      "Full-stack freelancer operating systems - CRM, invoicing, 19 business tools, private marketplaces, and branded PDF generation on mobile.",
     accent: "#6366f1",
     skills: ["SQLite", "PDF Engine", "Play Billing", "CRM Patterns", "Local-First"],
   },
@@ -354,7 +354,7 @@ export const expertiseDomains = [
     title: "Studio-Grade Products",
     subtitle: "CODCrafters",
     description:
-      "Production Flutter apps across 25+ countries — reusable architecture, modular monorepos, ERP integration, and deployment pipelines at scale.",
+      "Production Flutter apps across 25+ countries - reusable architecture, modular monorepos, ERP integration, and deployment pipelines at scale.",
     accent: "#0b6db4",
     skills: ["Clean Architecture", "Firebase", "Odoo ERP", "CI/CD", "Multi-App"],
   },
