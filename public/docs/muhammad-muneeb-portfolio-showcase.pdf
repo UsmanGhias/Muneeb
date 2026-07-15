@@ -1,0 +1,346 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 1138 >>
+stream
+BT
+/F2 24 Tf
+52 780 Td (Muhammad Muneeb) Tj
+-52 -780 Td
+/F2 13 Tf
+52 747 Td (Flutter Mobile Developer and UI/UX Enthusiast) Tj
+-52 -747 Td
+/F1 10 Tf
+52 729 Td (Samundri, Pakistan | muhammadmuneeb1061@gmail.com | +92 305 1621117) Tj
+-52 -729 Td
+/F1 10 Tf
+52 715 Td (Portfolio: https://muneeb.codcrafters.org) Tj
+-52 -715 Td
+/F2 20 Tf
+52 683 Td (Portfolio Showcase) Tj
+-52 -683 Td
+/F1 11 Tf
+52 656 Td (A presentation of production Flutter applications crafted for lifestyle, fitness,) Tj
+-52 -656 Td
+/F1 11 Tf
+52 641 Td (business productivity, and studio services. Each product focuses on polished UI,) Tj
+-52 -641 Td
+/F1 11 Tf
+52 626 Td (reliable local data, practical workflows, and scalable architecture.) Tj
+-52 -626 Td
+/F2 15 Tf
+52 599 Td (Highlights) Tj
+-52 -599 Td
+/F1 11 Tf
+52 578 Td (3+ years of experience, 20+ completed projects, 15+ happy clients, and 4 production) Tj
+-52 -578 Td
+/F1 11 Tf
+52 563 Td (app showcases.) Tj
+-52 -563 Td
+/F1 11 Tf
+52 548 Td (Core stack: Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Material 3, Android,) Tj
+-52 -548 Td
+/F1 11 Tf
+52 533 Td (Git, Figma, VS Code, and Postman.) Tj
+-52 -533 Td
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 1627 >>
+stream
+BT
+/F2 21 Tf
+52 780 Td (Noor Ul Haya) Tj
+-52 -780 Td
+/F2 13 Tf
+52 751 Td (Light for your sacred rhythm) Tj
+-52 -751 Td
+/F1 10 Tf
+52 733 Td (Lifestyle · Islam | Android 7.0+ | v1.3.0) Tj
+-52 -733 Td
+/F1 11 Tf
+52 707 Td (Your daily Islamic companion with accurate prayer times, Quran & Hadith in English) Tj
+-52 -707 Td
+/F1 11 Tf
+52 692 Td (and Urdu, Qibla compass, 60+ duas & azkar, digital Tasbih, and per-salah alarms.) Tj
+-52 -692 Td
+/F1 11 Tf
+52 677 Td (Bilingual, offline-capable, and privacy-first.) Tj
+-52 -677 Td
+/F2 14 Tf
+52 650 Td (Key Features) Tj
+-52 -650 Td
+/F1 10 Tf
+52 631 Td (• Live Adhan calculations with Hijri dates & sunrise times) Tj
+-52 -631 Td
+/F1 10 Tf
+52 617 Td (• Per-salah alarms, 15 minutes before each Adhan) Tj
+-52 -617 Td
+/F1 10 Tf
+52 603 Td (• Real-time Qibla compass with alignment feedback) Tj
+-52 -603 Td
+/F1 10 Tf
+52 589 Td (• Full Holy Quran with Arabic names & verse counts) Tj
+-52 -589 Td
+/F1 10 Tf
+52 575 Td (• Hadith collections with bookmark & search) Tj
+-52 -575 Td
+/F1 10 Tf
+52 561 Td (• 60+ duas and azkar by category with authentic references) Tj
+-52 -561 Td
+/F1 10 Tf
+52 547 Td (• Digital Tasbih with tap counter) Tj
+-52 -547 Td
+/F1 10 Tf
+52 533 Td (• Daily prayer tracker with visual progress ring) Tj
+-52 -533 Td
+/F2 14 Tf
+52 509 Td (Tech Stack) Tj
+-52 -509 Td
+/F1 10 Tf
+52 490 Td (Flutter 3.x, Riverpod, GoRouter, Adhan Dart, Hive, Geolocator, Material 3) Tj
+-52 -490 Td
+/F1 10 Tf
+52 466 Td (Product link: https://noor-ul-haya.codcrafters.org) Tj
+-52 -466 Td
+/F1 10 Tf
+52 452 Td (Google Play: https://play.google.com/store/apps/details?id=org.codcrafters.noor) Tj
+-52 -452 Td
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1536 >>
+stream
+BT
+/F2 21 Tf
+52 780 Td (ForgeNFit) Tj
+-52 -780 Td
+/F2 13 Tf
+52 751 Td (Your gym journey starts here) Tj
+-52 -751 Td
+/F1 10 Tf
+52 733 Td (Health & Fitness | Android | v2.6.7) Tj
+-52 -733 Td
+/F1 11 Tf
+52 707 Td (An AI-powered fitness & nutrition app for gym-goers. Plan workouts, track nutrition,) Tj
+-52 -707 Td
+/F1 11 Tf
+52 692 Td (hit PRs with video-guided form cues, and use an adaptive AI coach built for Android.) Tj
+-52 -692 Td
+/F2 14 Tf
+52 665 Td (Key Features) Tj
+-52 -665 Td
+/F1 10 Tf
+52 646 Td (• 7-day PPL workout splits with video-guided form cues) Tj
+-52 -646 Td
+/F1 10 Tf
+52 632 Td (• Nutrition tracker with 50,000+ food database) Tj
+-52 -632 Td
+/F1 10 Tf
+52 618 Td (• AI coach adapting plans based on progress & recovery) Tj
+-52 -618 Td
+/F1 10 Tf
+52 604 Td (• Body metrics including BMI, WHR, TDEE, and BMR tracking) Tj
+-52 -604 Td
+/F1 10 Tf
+52 590 Td (• Smart rest timer based on set intensity) Tj
+-52 -590 Td
+/F1 10 Tf
+52 576 Td (• Offline mode for workouts & timers) Tj
+-52 -576 Td
+/F1 10 Tf
+52 562 Td (• Anthropometric calculator with live dashboard) Tj
+-52 -562 Td
+/F1 10 Tf
+52 548 Td (• Weekly strength & body metric trends) Tj
+-52 -548 Td
+/F2 14 Tf
+52 524 Td (Tech Stack) Tj
+-52 -524 Td
+/F1 10 Tf
+52 505 Td (Flutter, Riverpod, Hive, REST APIs, Material 3, Local Notifications, Offline Sync) Tj
+-52 -505 Td
+/F1 10 Tf
+52 481 Td (Product link: https://forgenfit.codcrafters.org) Tj
+-52 -481 Td
+/F1 10 Tf
+52 467 Td (Google Play: https://play.google.com/store/apps/details?id=org.codcrafters.forgenfit) Tj
+-52 -467 Td
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 1575 >>
+stream
+BT
+/F2 21 Tf
+52 780 Td (Clivora) Tj
+-52 -780 Td
+/F2 13 Tf
+52 751 Td (Connect marketplace + business OS) Tj
+-52 -751 Td
+/F1 10 Tf
+52 733 Td (Business · Productivity | Web + Android | v2.10.7) Tj
+-52 -733 Td
+/F1 11 Tf
+52 707 Td (A cloud-first business operating system for freelancers and agencies with a private) Tj
+-52 -707 Td
+/F1 11 Tf
+52 692 Td (marketplace, CRM, projects, invoicing, and 19 integrated tools on web and Android) Tj
+-52 -692 Td
+/F1 11 Tf
+52 677 Td (with one account.) Tj
+-52 -677 Td
+/F2 14 Tf
+52 650 Td (Key Features) Tj
+-52 -650 Td
+/F1 10 Tf
+52 631 Td (• Business command center with revenue snapshot) Tj
+-52 -631 Td
+/F1 10 Tf
+52 617 Td (• Client CRM with search & management) Tj
+-52 -617 Td
+/F1 10 Tf
+52 603 Td (• Projects, time tracking, and budgets) Tj
+-52 -603 Td
+/F1 10 Tf
+52 589 Td (• Professional invoicing with branded PDF export) Tj
+-52 -589 Td
+/F1 10 Tf
+52 575 Td (• CLIVORA Connect, private freelancer marketplace) Tj
+-52 -575 Td
+/F1 10 Tf
+52 561 Td (• CLIVORA AI, local business insights & alerts) Tj
+-52 -561 Td
+/F1 10 Tf
+52 547 Td (• File Vault with secure on-device storage) Tj
+-52 -547 Td
+/F1 10 Tf
+52 533 Td (• Expense tracking across 11 categories) Tj
+-52 -533 Td
+/F2 14 Tf
+52 509 Td (Tech Stack) Tj
+-52 -509 Td
+/F1 10 Tf
+52 490 Td (Flutter, Riverpod, Hive + SQLite, GoRouter, PDF Generation, Play Billing, REST APIs) Tj
+-52 -490 Td
+/F1 10 Tf
+52 466 Td (Product link: https://clivora.codcrafters.org) Tj
+-52 -466 Td
+/F1 10 Tf
+52 452 Td (Google Play: https://play.google.com/store/apps/details?id=org.codcrafters.clivora) Tj
+-52 -452 Td
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1470 >>
+stream
+BT
+/F2 21 Tf
+52 780 Td (CODCrafters) Tj
+-52 -780 Td
+/F2 13 Tf
+52 751 Td (Your vision, our code) Tj
+-52 -751 Td
+/F1 10 Tf
+52 733 Td (Business · Studio | Android | v1.0.0) Tj
+-52 -733 Td
+/F1 11 Tf
+52 707 Td (The official CODCrafters mobile app. Discover our portfolio of Flutter products, ERP) Tj
+-52 -707 Td
+/F1 11 Tf
+52 692 Td (solutions, and custom software services built by the studio behind Noor Ul Haya,) Tj
+-52 -692 Td
+/F1 11 Tf
+52 677 Td (ForgeNFit, and Clivora.) Tj
+-52 -677 Td
+/F2 14 Tf
+52 650 Td (Key Features) Tj
+-52 -650 Td
+/F1 10 Tf
+52 631 Td (• Explore CODCrafters portfolio of Flutter mobile apps) Tj
+-52 -631 Td
+/F1 10 Tf
+52 617 Td (• Request quotes for custom software development) Tj
+-52 -617 Td
+/F1 10 Tf
+52 603 Td (• Odoo ERP & business automation services) Tj
+-52 -603 Td
+/F1 10 Tf
+52 589 Td (• AI/ML integration for intelligent products) Tj
+-52 -589 Td
+/F1 10 Tf
+52 575 Td (• Case studies from 185+ completed engagements) Tj
+-52 -575 Td
+/F1 10 Tf
+52 561 Td (• Direct contact with the development team) Tj
+-52 -561 Td
+/F1 10 Tf
+52 547 Td (• Learn about mobile, web & cloud solutions) Tj
+-52 -547 Td
+/F2 14 Tf
+52 523 Td (Tech Stack) Tj
+-52 -523 Td
+/F1 10 Tf
+52 504 Td (Flutter, Dart, Firebase, Odoo ERP, Python, REST APIs, CI/CD) Tj
+-52 -504 Td
+/F1 10 Tf
+52 480 Td (Product link: https://codcrafters.org) Tj
+-52 -480 Td
+/F1 10 Tf
+52 466 Td (Google Play: https://play.google.com/store/apps/details?id=org.codcrafters.codcrafters_app) Tj
+-52 -466 Td
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000001344 00000 n 
+0000001481 00000 n 
+0000003160 00000 n 
+0000003297 00000 n 
+0000004885 00000 n 
+0000005022 00000 n 
+0000006649 00000 n 
+0000006787 00000 n 
+0000008310 00000 n 
+0000008449 00000 n 
+0000008533 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+8584
+%%EOF
