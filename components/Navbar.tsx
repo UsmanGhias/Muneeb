@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaFilePdf, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -96,16 +96,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Resume Link */}
-          <motion.a
-            href="/resume"
-            className="hidden items-center gap-2 rounded-full border border-[rgba(0,212,255,0.35)] bg-white/[0.04] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:border-[var(--accent2)] hover:text-[var(--accent2)] lg:flex"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <FaFilePdf /> Resume
-          </motion.a>
-
           {/* Hire Me Button */}
           <motion.a
             href="#contact"
@@ -157,20 +147,11 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="/resume"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-              className="mt-6 flex items-center justify-center gap-2 rounded-full border border-[rgba(0,212,255,0.35)] py-3 text-center font-semibold text-white"
-            >
-              <FaFilePdf /> Resume
-            </motion.a>
-            <motion.a
               href="#contact"
               onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.35 }}
               className="mt-6 text-center py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]"
             >
               Hire Me
