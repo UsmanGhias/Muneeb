@@ -73,11 +73,11 @@ export const apps: AppProject[] = [
       { title: "Digital Tasbih", description: "Tap counter for dhikr with instant reset.", icon: "📿" },
     ],
     screenshots: [
-      { src: "/apps/noor-ul-haya/1.svg", alt: "Noor Ul Haya Prayer Dashboard", caption: "Prayer" },
-      { src: "/apps/noor-ul-haya/2.svg", alt: "Noor Ul Haya Qibla Compass", caption: "Qibla" },
-      { src: "/apps/noor-ul-haya/3.svg", alt: "Noor Ul Haya Quran Reader", caption: "Quran" },
-      { src: "/apps/noor-ul-haya/4.svg", alt: "Noor Ul Haya Duas Library", caption: "Duas" },
-      { src: "/apps/noor-ul-haya/5.svg", alt: "Noor Ul Haya Digital Tasbih", caption: "Tasbih" },
+      { src: "/apps/noor-ul-haya/1.svg", alt: "Noor Ul Haya quick actions dashboard", caption: "Home" },
+      { src: "/apps/noor-ul-haya/2.svg", alt: "Noor Ul Haya Quran surah list", caption: "Quran" },
+      { src: "/apps/noor-ul-haya/3.svg", alt: "Noor Ul Haya Quran pages grid", caption: "Pages" },
+      { src: "/apps/noor-ul-haya/4.svg", alt: "Noor Ul Haya settings and explore menu", caption: "Settings" },
+      { src: "/apps/noor-ul-haya/5.svg", alt: "Noor Ul Haya Zakat calculator", caption: "Zakat" },
     ],
   },
   {
