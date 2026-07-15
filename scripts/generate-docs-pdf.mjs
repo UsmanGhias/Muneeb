@@ -80,7 +80,7 @@ const header = [
   { text: 'Muhammad Muneeb', size: 24, bold: true, max: 40 },
   { text: 'Flutter Mobile Developer and UI/UX Enthusiast', size: 13, bold: true },
   { text: 'Samundri, Pakistan | muhammadmuneeb1061@gmail.com | +92 305 1621117', size: 10 },
-  { text: 'Portfolio: https://muneeb.codcrafters.org', size: 10 },
+  { text: 'Portfolio: https://muneeb.codcrafters.org | GitHub: https://github.com/UsmanGhias/Muneeb', size: 10 },
   { gap: 18 },
 ];
 
@@ -91,7 +91,7 @@ const portfolioPages = [
     { text: 'A presentation of production Flutter applications crafted for lifestyle, fitness, business productivity, and studio services. Each product focuses on polished UI, reliable local data, practical workflows, and scalable architecture.', size: 11 },
     { gap: 12 },
     { text: 'Highlights', size: 15, bold: true },
-    { text: '3+ years of experience, 20+ completed projects, 15+ happy clients, and 4 production app showcases.', size: 11 },
+    { text: '4+ years of experience, 20+ completed projects, 15+ happy clients, and 4+ apps on the Play Store.', size: 11 },
     { text: 'Core stack: Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Material 3, Android, Git, Figma, VS Code, and Postman.', size: 11 },
   ],
   ...apps.map((app) => ([
@@ -115,7 +115,7 @@ const portfolioPages = [
 const resumePages = [[
   ...header,
   { text: 'Professional Summary', size: 15, bold: true },
-  { text: 'Flutter developer building elegant, high performance mobile applications for Android and iOS from one codebase. Experienced with production apps, offline support, clean architecture, API integration, local databases, and polished interfaces.', size: 11 },
+  { text: 'Flutter developer with 4+ years of experience building elegant, high performance mobile applications for Android and iOS from one codebase. Experienced with production apps, offline support, clean architecture, API integration, local databases, and polished interfaces.', size: 11 },
   { gap: 12 },
   { text: 'Experience', size: 15, bold: true },
   { text: 'Flutter Developer | CodCrafters | Samundri, Pakistan | 2023 to Present', size: 11, bold: true },
@@ -124,6 +124,9 @@ const resumePages = [[
   { text: 'Built mobile UI components, fixed bugs, improved app performance, joined code reviews, and learned Firebase integration, push notifications, and local storage.', size: 10 },
   { text: 'Freelance Mobile Developer | Fiverr and Upwork | 2021 to Present', size: 11, bold: true },
   { text: 'Delivered custom Flutter applications for international clients, handled planning, design, development, deployment, and app store publishing.', size: 10 },
+  { gap: 12 },
+  { text: 'Education', size: 15, bold: true },
+  { text: 'Bachelor of Science in Computer Science | PUCIT | 2019 to 2023', size: 11, bold: true },
   { gap: 12 },
   { text: 'Skills', size: 15, bold: true },
   { text: 'Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Android, iOS, Material 3, local notifications, offline sync, MySQL, MongoDB, Git, GitHub, Figma, VS Code, Postman.', size: 10 },
