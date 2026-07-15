@@ -6,8 +6,8 @@ import { FaCalendarAlt, FaCode, FaEnvelope, FaUsers } from 'react-icons/fa';
 import OrbitPortrait from './OrbitPortrait';
 
 const stats = [
-  { target: 2, label: 'Years Experience', icon: <FaCalendarAlt />, accent: 'from-[#c23bff] to-[#7537ff]' },
-  { target: 4, label: 'Production Apps', icon: <FaCode />, accent: 'from-[#00d4ff] to-[#246bff]' },
+  { target: 4, label: 'Years Experience', icon: <FaCalendarAlt />, accent: 'from-[#c23bff] to-[#7537ff]' },
+  { target: 4, label: 'Apps on Play Store', icon: <FaCode />, accent: 'from-[#00d4ff] to-[#246bff]' },
   { target: 10, label: 'Happy Clients', icon: <FaUsers />, accent: 'from-[#20f2a0] to-[#00b886]' },
 ];
 

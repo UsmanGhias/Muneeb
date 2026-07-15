@@ -6,7 +6,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Length 1138 >>
+<< /Length 1221 >>
 stream
 BT
 /F2 24 Tf
@@ -19,35 +19,38 @@ BT
 52 729 Td (Samundri, Pakistan | muhammadmuneeb1061@gmail.com | +92 305 1621117) Tj
 -52 -729 Td
 /F1 10 Tf
-52 715 Td (Portfolio: https://muneeb.codcrafters.org) Tj
+52 715 Td (Portfolio: https://muneeb.codcrafters.org | GitHub:) Tj
 -52 -715 Td
+/F1 10 Tf
+52 701 Td (https://github.com/UsmanGhias/Muneeb) Tj
+-52 -701 Td
 /F2 20 Tf
-52 683 Td (Portfolio Showcase) Tj
--52 -683 Td
+52 669 Td (Portfolio Showcase) Tj
+-52 -669 Td
 /F1 11 Tf
-52 656 Td (A presentation of production Flutter applications crafted for lifestyle, fitness,) Tj
--52 -656 Td
+52 642 Td (A presentation of production Flutter applications crafted for lifestyle, fitness,) Tj
+-52 -642 Td
 /F1 11 Tf
-52 641 Td (business productivity, and studio services. Each product focuses on polished UI,) Tj
--52 -641 Td
+52 627 Td (business productivity, and studio services. Each product focuses on polished UI,) Tj
+-52 -627 Td
 /F1 11 Tf
-52 626 Td (reliable local data, practical workflows, and scalable architecture.) Tj
--52 -626 Td
+52 612 Td (reliable local data, practical workflows, and scalable architecture.) Tj
+-52 -612 Td
 /F2 15 Tf
-52 599 Td (Highlights) Tj
--52 -599 Td
+52 585 Td (Highlights) Tj
+-52 -585 Td
 /F1 11 Tf
-52 578 Td (3+ years of experience, 20+ completed projects, 15+ happy clients, and 4 production) Tj
--52 -578 Td
+52 564 Td (4+ years of experience, 20+ completed projects, 15+ happy clients, and 4+ apps on) Tj
+-52 -564 Td
 /F1 11 Tf
-52 563 Td (app showcases.) Tj
--52 -563 Td
+52 549 Td (the Play Store.) Tj
+-52 -549 Td
 /F1 11 Tf
-52 548 Td (Core stack: Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Material 3, Android,) Tj
--52 -548 Td
+52 534 Td (Core stack: Flutter, Dart, Riverpod, Hive, Firebase, REST APIs, Material 3, Android,) Tj
+-52 -534 Td
 /F1 11 Tf
-52 533 Td (Git, Figma, VS Code, and Postman.) Tj
--52 -533 Td
+52 519 Td (Git, Figma, VS Code, and Postman.) Tj
+-52 -519 Td
 ET
 endstream
 endobj
@@ -328,19 +331,19 @@ xref
 0000000009 00000 n 
 0000000079 00000 n 
 0000000154 00000 n 
-0000001344 00000 n 
-0000001481 00000 n 
-0000003160 00000 n 
-0000003297 00000 n 
-0000004885 00000 n 
-0000005022 00000 n 
-0000006649 00000 n 
-0000006787 00000 n 
-0000008310 00000 n 
-0000008449 00000 n 
-0000008533 00000 n 
+0000001427 00000 n 
+0000001564 00000 n 
+0000003243 00000 n 
+0000003380 00000 n 
+0000004968 00000 n 
+0000005105 00000 n 
+0000006732 00000 n 
+0000006870 00000 n 
+0000008393 00000 n 
+0000008532 00000 n 
+0000008616 00000 n 
 trailer
 << /Size 15 /Root 14 0 R >>
 startxref
-8584
+8667
 %%EOF

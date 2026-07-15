@@ -149,7 +149,7 @@ export default function Contact() {
             {/* Socials */}
             <div className="flex flex-wrap items-center gap-3 pt-2"><span className="text-[var(--text-secondary)] text-sm mr-2">Let&apos;s connect on</span>
               {[
-                { icon: <FaGithub />, href: 'https://github.com/usmanghias/muneeb', label: 'GitHub' },
+                { icon: <FaGithub />, href: 'https://github.com/UsmanGhias/Muneeb', label: 'GitHub' },
                 { icon: <FaLinkedin />, href: 'https://linkedin.com/', label: 'LinkedIn' },
                 { icon: <FaEnvelope />, href: 'mailto:muhammadmuneeb1061@gmail.com', label: 'Email' },
               ].map((s) => (

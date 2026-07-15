@@ -16,7 +16,7 @@ import { SiDart, SiFlutter } from 'react-icons/si';
 import OrbitPortrait from './OrbitPortrait';
 
 const stats = [
-  { value: '3+', label: 'Years Experience', icon: '</>' },
+  { value: '4+', label: 'Years Experience', icon: '</>' },
   { value: '20+', label: 'Projects Completed', icon: '▣' },
   { value: '15+', label: 'Happy Clients', icon: '♡' },
   { value: '100%', label: 'Client Satisfaction', icon: '↗' },
@@ -25,7 +25,7 @@ const stats = [
 const socials = [
   { icon: <FaEnvelope />, href: 'mailto:muhammadmuneeb1061@gmail.com', label: 'Email' },
   { icon: <FaPhone />, href: 'tel:+923051621117', label: 'Phone' },
-  { icon: <FaGithub />, href: 'https://github.com/usmanghias/muneeb', label: 'GitHub' },
+  { icon: <FaGithub />, href: 'https://github.com/UsmanGhias/Muneeb', label: 'GitHub' },
   { icon: <FaLinkedin />, href: 'https://linkedin.com/', label: 'LinkedIn' },
 ];
 
