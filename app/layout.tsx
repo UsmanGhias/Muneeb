@@ -10,15 +10,25 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://muneeb.codcrafters.org'),
   title: 'Muhammad Muneeb | Flutter Developer',
   description:
-    'Passionate Flutter developer crafting beautiful, high-performance mobile applications for iOS & Android from Samundri, Pakistan.',
+    'Flutter developer building Android and iOS applications since 2021. Currently working on production-grade apps at CodCrafters.',
   keywords: ['Flutter', 'Mobile Developer', 'Dart', 'iOS', 'Android', 'Muhammad Muneeb'],
   authors: [{ name: 'Muhammad Muneeb' }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Muhammad Muneeb | Flutter Developer',
-    description: 'Cross-platform mobile developer specializing in Flutter & Dart.',
+    description:
+      'Flutter developer building Android and iOS applications with maintainable architecture and offline functionality.',
     type: 'website',
+    images: ['/profile.jpeg'],
   },
 };
 
