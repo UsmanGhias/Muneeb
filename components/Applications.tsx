@@ -3,32 +3,26 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheck, FaExternalLinkAlt, FaGooglePlay, FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa';
-import { apps, type AppProject } from '@/data/portfolio';
+import { FaCheck, FaExternalLinkAlt, FaGooglePlay, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { apps, type AppProject, type AppStory } from '@/data/portfolio';
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.18 } },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 };
 
 function AppIcon({ app }: { app: AppProject }) {
   if (app.appIcon) {
     return (
-      <Image
-        src={app.appIcon}
-        alt={app.name}
-        width={56}
-        height={56}
-        className="rounded-2xl shadow-glow-accent"
-      />
+      <Image src={app.appIcon} alt={app.name} width={52} height={52} className="rounded-2xl" />
     );
   }
-  return <span className="text-4xl">{app.icon}</span>;
+  return <span className="text-3xl">{app.icon}</span>;
 }
 
 function ScreenshotCarousel({ app }: { app: AppProject }) {
@@ -40,25 +34,18 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
   const next = () => setActive((i) => (i + 1) % shots.length);
 
   return (
-    <div className="featured-device flex flex-col items-center gap-5">
-      <div className="relative featured-orbit-wrap">
-        <div className="featured-orbit orbit-one" />
-        <div className="featured-orbit orbit-two" />
-        <div className="featured-orbit orbit-three" />
-        <div
-          className="absolute -inset-7 rounded-[2.5rem] opacity-30 blur-2xl pointer-events-none"
-          style={{ background: `linear-gradient(135deg, ${app.accent}, ${app.accentSecondary})` }}
-        />
-        <div className="featured-phone relative w-[235px] md:w-[270px] rounded-[2.35rem] border-2 bg-[var(--bg-card)] p-2">
+    <div className="featured-device flex flex-col items-center gap-4">
+      <div className="relative">
+        <div className="featured-phone relative w-[220px] rounded-[2.2rem] border-2 bg-[var(--bg-card)] p-2 md:w-[250px]">
           <div className="phone-speaker" />
-          <div className="relative aspect-[9/19.5] rounded-[1.8rem] overflow-hidden bg-black">
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.7rem] bg-black">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 16 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, x: -16 }}
+                transition={{ duration: 0.25 }}
                 className="absolute inset-0"
               >
                 <Image
@@ -67,7 +54,7 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
                   fill
                   className="object-contain object-center bg-black"
                   unoptimized
-                  sizes="(min-width: 768px) 270px, 235px"
+                  sizes="(min-width: 768px) 250px, 220px"
                 />
               </motion.div>
             </AnimatePresence>
@@ -81,10 +68,10 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
         <div className="flex items-center gap-3">
           <button
             onClick={prev}
-            className="w-10 h-10 rounded-full border border-[rgba(108,99,255,0.45)] flex items-center justify-center text-white/75 hover:text-[var(--accent2)] hover:border-[var(--accent2)] transition-colors bg-[#080817]/70"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(108,99,255,0.35)] bg-[#080817]/70 text-white/75 transition-colors hover:border-[var(--accent2)] hover:text-[var(--accent2)]"
             aria-label="Previous screenshot"
           >
-            <FaChevronLeft size={12} />
+            <FaChevronLeft size={11} />
           </button>
           <div className="flex gap-2">
             {shots.map((shot, i) => (
@@ -92,7 +79,9 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
                 key={shot.src}
                 onClick={() => setActive(i)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === active ? 'w-6 bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]' : 'w-1.5 bg-[rgba(108,99,255,0.3)]'
+                  i === active
+                    ? 'w-5 bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]'
+                    : 'w-1.5 bg-[rgba(108,99,255,0.28)]'
                 }`}
                 aria-label={shot.caption || `Screenshot ${i + 1}`}
               />
@@ -100,10 +89,10 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
           </div>
           <button
             onClick={next}
-            className="w-10 h-10 rounded-full border border-[rgba(108,99,255,0.45)] flex items-center justify-center text-white/75 hover:text-[var(--accent2)] hover:border-[var(--accent2)] transition-colors bg-[#080817]/70"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(108,99,255,0.35)] bg-[#080817]/70 text-white/75 transition-colors hover:border-[var(--accent2)] hover:text-[var(--accent2)]"
             aria-label="Next screenshot"
           >
-            <FaChevronRight size={12} />
+            <FaChevronRight size={11} />
           </button>
         </div>
       )}
@@ -111,44 +100,98 @@ function ScreenshotCarousel({ app }: { app: AppProject }) {
   );
 }
 
-function FeatureModulesGrid({ app }: { app: AppProject }) {
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-      {(app.featureModules || []).map((mod) => (
-        <div
-          key={mod.title}
-          className="glass-card p-4 transition-all duration-300 hover:border-[rgba(108,99,255,0.35)]"
-        >
-          <span className="text-2xl mb-2 block">{mod.icon}</span>
-          <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">{mod.title}</h4>
-          <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{mod.description}</p>
+function StoryPanel({ story, accent }: { story: AppStory; accent: string }) {
+  if (story.kind === 'engineering') {
+    return (
+      <div className="story-block">
+        <h4>{story.title}</h4>
+        <p className="mb-3 font-medium text-white/90">{story.focus}</p>
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-white/45">Implemented</p>
+        <ul className="space-y-1.5">
+          {story.items?.map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <FaCheck className="mt-1 flex-shrink-0" size={11} style={{ color: accent }} />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  if (story.kind === 'problem') {
+    return (
+      <div className="grid gap-3 sm:grid-cols-2">
+        <div className="story-block">
+          <h4>User problem</h4>
+          <p>{story.problem}</p>
         </div>
-      ))}
+        <div className="story-block">
+          <h4>Product response</h4>
+          <p>{story.response}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (story.kind === 'platform') {
+    return (
+      <div className="story-block">
+        <h4>{story.title}</h4>
+        <ul className="mt-1 grid gap-2 sm:grid-cols-2">
+          {story.items?.map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full" style={{ background: accent }} />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      <div className="story-block">
+        <h4>{story.title}</h4>
+        <p>{story.purpose}</p>
+      </div>
+      <div className="story-block">
+        <h4>My contribution</h4>
+        <ul className="space-y-1.5">
+          {story.contribution?.map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <FaCheck className="mt-1 flex-shrink-0" size={11} style={{ color: accent }} />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
 function AppLinks({ app }: { app: AppProject }) {
   return (
-    <div className="flex flex-wrap gap-4 pt-3">
+    <div className="flex flex-wrap gap-3 pt-2">
       <a
         href={app.website}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-3 px-7 py-3.5 rounded-[1.25rem] text-base font-bold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] hover:shadow-[0_0_28px_rgba(0,212,255,0.35)] transition-all duration-300"
+        className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] px-5 py-3 text-sm font-bold text-white transition-all duration-300"
       >
-        <FaExternalLinkAlt size={12} />
-        View Product
+        <FaExternalLinkAlt size={11} />
+        Visit Website
       </a>
       {app.playStore && (
         <a
           href={app.playStore}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-7 py-3.5 rounded-[1.25rem] text-base font-bold border border-[var(--accent)] text-[var(--accent)] bg-[#080817]/50 hover:bg-[var(--accent)] hover:text-white transition-all duration-300"
+          className="inline-flex items-center gap-2 rounded-xl border border-[var(--accent)] bg-[#080817]/50 px-5 py-3 text-sm font-bold text-[var(--accent)] transition-all duration-300 hover:bg-[var(--accent)] hover:text-white"
         >
-          <FaGooglePlay size={14} />
-          {app.playStoreStatus === 'launching' ? 'Google Play - Launching' : 'Google Play'}
+          <FaGooglePlay size={13} />
+          {app.playStoreStatus === 'launching' ? 'Coming to Play Store' : 'View on Play Store'}
         </a>
       )}
     </div>
@@ -157,47 +200,27 @@ function AppLinks({ app }: { app: AppProject }) {
 
 function AppShowcase({ app, index }: { app: AppProject; index: number }) {
   const hasScreenshots = app.screenshots.length > 0;
-  const isReversed = app.id === 'clivora';
+  const isReversed = index % 2 === 1;
 
   return (
-    <motion.div
-      variants={cardVariants}
-      className="featured-work-card transition-all duration-300"
-    >
-      <div className={`grid lg:grid-cols-[0.88fr_1.12fr] gap-10 xl:gap-14 items-center ${isReversed ? 'lg:[&>*:first-child]:order-2 lg:grid-cols-[1.12fr_0.88fr]' : ''}`}>
-        {/* Visual */}
+    <motion.div variants={cardVariants} className="featured-work-card transition-all duration-300">
+      <div
+        className={`grid items-center gap-10 xl:gap-12 ${
+          isReversed
+            ? 'lg:grid-cols-[1.1fr_0.9fr] lg:[&>*:first-child]:order-2'
+            : 'lg:grid-cols-[0.9fr_1.1fr]'
+        }`}
+      >
         <div className="relative flex justify-center">
-          {hasScreenshots ? (
-            <ScreenshotCarousel app={app} />
-          ) : (
-            <div className="w-full max-w-sm">
-              <div className="flex items-center gap-4 mb-6">
-                <AppIcon app={app} />
-                <div>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-wider"
-                    style={{ color: app.accent }}
-                  >
-                    {app.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)]">{app.name}</h3>
-                  {app.version && (
-                    <p className="text-xs text-[var(--text-secondary)]">{app.version}</p>
-                  )}
-                </div>
-              </div>
-              <FeatureModulesGrid app={app} />
-            </div>
-          )}
+          {hasScreenshots ? <ScreenshotCarousel app={app} /> : null}
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 space-y-6">
+        <div className="relative z-10 space-y-5">
           <div className="flex items-start gap-4">
-            {hasScreenshots && <AppIcon app={app} />}
+            <AppIcon app={app} />
             <div>
               <span
-                className="inline-block px-4 py-1.5 rounded-full text-sm font-bold mb-3"
+                className="mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold"
                 style={{
                   background: `${app.accent}22`,
                   border: `1px solid ${app.accent}44`,
@@ -206,34 +229,25 @@ function AppShowcase({ app, index }: { app: AppProject; index: number }) {
               >
                 {app.category}
               </span>
-              <h3 className="text-4xl md:text-5xl font-black tracking-[-0.04em] text-white">{app.name}</h3>
-              <p className="text-[var(--accent2)] font-bold text-lg mt-2">{app.tagline}</p>
+              <h3 className="text-3xl font-black tracking-[-0.03em] text-white md:text-4xl">{app.name}</h3>
+              <p className="mt-1.5 text-base font-semibold text-[var(--accent2)]">{app.tagline}</p>
             </div>
           </div>
 
-          <p className="text-lg leading-[1.75] text-white/72">{app.description}</p>
+          <p className="text-base leading-[1.7] text-white/72">{app.description}</p>
+
+          <StoryPanel story={app.story} accent={app.accentSecondary} />
 
           <div className="flex flex-wrap gap-2">
-            {app.techStack.map((tech) => (
+            {app.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full text-sm font-semibold text-white/82 border border-[rgba(108,99,255,0.35)] bg-[rgba(8,8,23,0.45)]"
+                className="rounded-full border border-[rgba(108,99,255,0.28)] bg-[rgba(8,8,23,0.4)] px-3.5 py-1.5 text-sm font-semibold text-white/80"
               >
                 {tech}
               </span>
             ))}
           </div>
-
-          <ul className="space-y-2">
-            {app.features.slice(0, 4).map((feature) => (
-              <li key={feature} className="flex items-start gap-3 text-base text-white/76">
-                <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border" style={{ borderColor: app.accentSecondary, color: app.accentSecondary }}>
-                  <FaCheck size={12} />
-                </span>
-                {feature}
-              </li>
-            ))}
-          </ul>
 
           <AppLinks app={app} />
         </div>
@@ -244,25 +258,23 @@ function AppShowcase({ app, index }: { app: AppProject; index: number }) {
 
 export default function Applications() {
   return (
-    <section id="applications" className="relative py-24 overflow-hidden">
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[var(--accent2)] opacity-5 rounded-full blur-[150px] pointer-events-none" />
-
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="applications" className="relative overflow-hidden py-24">
+      <div className="mx-auto max-w-6xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.55 }}
+          className="mb-14 text-center"
         >
-          <span className="section-tag mb-4 inline-flex items-center gap-2"><FaStar /> Featured Work</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)]">
+          <h2 className="text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
             Flutter <span className="gradient-text">Applications</span>
           </h2>
-          <p className="mt-4 text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Four production Flutter apps built at CodCrafters, spanning Islamic lifestyle, fitness, and business platforms.
+          <p className="mx-auto mt-4 max-w-2xl text-[var(--text-secondary)]">
+            Four production-grade Flutter apps built at CodCrafters, spanning Islamic lifestyle, fitness,
+            and business platforms — prepared for Play Store release.
           </p>
-          <div className="mt-4 mx-auto w-20 h-1 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]" />
+          <div className="title-line mx-auto mt-5" />
         </motion.div>
 
         <motion.div

@@ -9,6 +9,7 @@ const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#applications', label: 'Apps' },
   { href: '#experience', label: 'Experience' },
+  { href: '#process', label: 'Process' },
   { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -48,36 +49,37 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.55, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#0a0a14]/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(108,99,255,0.15)] border-b border-[rgba(108,99,255,0.15)]'
+            ? 'border-b border-[rgba(108,99,255,0.12)] bg-[#0a0a14]/92 shadow-[0_4px_20px_rgba(0,0,0,0.25)] backdrop-blur-xl'
             : 'bg-transparent'
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-6 lg:px-8">
-          {/* Logo */}
-          <motion.a
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-6 lg:px-8">
+          <a
             href="#home"
-            onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
-            className="group flex min-w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] py-2 pl-2 pr-4 text-[var(--text-primary)] shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[rgba(0,212,255,0.35)]"
-            whileHover={{ scale: 1.05 }}
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#home');
+            }}
+            className="flex min-w-fit flex-col leading-tight text-[var(--text-primary)]"
           >
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)] text-base font-black text-white shadow-[0_0_22px_rgba(0,212,255,0.32)]">
-              M
-            </span>
             <span className="text-lg font-black tracking-[-0.03em] sm:text-xl">
-              M<span className="gradient-text">.</span>Muneeb
+              M<span className="gradient-text">.</span> Muneeb
             </span>
-          </motion.a>
+            <span className="text-[0.7rem] font-medium text-[var(--text-secondary)]">Flutter Developer</span>
+          </a>
 
-          {/* Desktop Nav */}
-          <ul className="hidden items-center gap-5 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur-md lg:flex xl:gap-7">
+          <ul className="hidden items-center gap-5 rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 backdrop-blur-md lg:flex xl:gap-6">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.href);
+                  }}
                   className={`relative text-sm font-medium transition-colors duration-200 ${
                     activeSection === link.href.slice(1)
                       ? 'text-[var(--accent)]'
@@ -88,7 +90,7 @@ export default function Navbar() {
                   {activeSection === link.href.slice(1) && (
                     <motion.span
                       layoutId="nav-indicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] rounded-full"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]"
                     />
                   )}
                 </a>
@@ -96,48 +98,50 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Hire Me Button */}
           <motion.a
             href="#contact"
-            onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-            className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(108,99,255,0.5)] lg:flex"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#contact');
+            }}
+            className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 lg:flex"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             Hire Me
           </motion.a>
 
-          {/* Mobile Hamburger */}
-          <motion.button
+          <button
             className="rounded-lg p-2 text-[var(--text-primary)] lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
-            whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </motion.button>
+          </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed bottom-0 right-0 top-0 z-40 flex w-72 flex-col gap-4 border-l border-[rgba(108,99,255,0.2)] bg-[#12121f]/98 px-8 pt-24 shadow-2xl backdrop-blur-xl"
+            transition={{ type: 'tween', duration: 0.28 }}
+            className="fixed bottom-0 right-0 top-0 z-40 flex w-72 flex-col gap-3 border-l border-[rgba(108,99,255,0.18)] bg-[#12121f]/98 px-8 pt-24 shadow-2xl backdrop-blur-xl"
           >
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                initial={{ opacity: 0, x: 40 }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
+                initial={{ opacity: 0, x: 28 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.07 }}
-                className={`text-lg font-medium py-3 border-b border-[rgba(108,99,255,0.1)] transition-colors ${
+                transition={{ delay: i * 0.05 }}
+                className={`border-b border-[rgba(108,99,255,0.1)] py-3 text-lg font-medium transition-colors ${
                   activeSection === link.href.slice(1)
                     ? 'text-[var(--accent)]'
                     : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
@@ -146,21 +150,20 @@ export default function Navbar() {
                 {link.label}
               </motion.a>
             ))}
-            <motion.a
+            <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-              className="mt-6 text-center py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)]"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('#contact');
+              }}
+              className="mt-4 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] py-3 text-center font-semibold text-white"
             >
               Hire Me
-            </motion.a>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Mobile Overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

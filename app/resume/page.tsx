@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft, FaDownload, FaExternalLinkAlt } from 'react-icons/fa';
-import { FaCode, FaEnvelope, FaGithub, FaGraduationCap, FaLinkedin, FaLocationDot, FaMobileScreen, FaPhone, FaRocket, FaTools, FaTrophy, FaUsers } from 'react-icons/fa6';
+import { FaCode, FaEnvelope, FaGithub, FaGraduationCap, FaLinkedin, FaLocationDot, FaMobileScreen, FaPhone, FaRocket, FaScrewdriverWrench, FaTrophy, FaUsers } from 'react-icons/fa6';
 import { SiDart, SiFirebase, SiFlutter } from 'react-icons/si';
 
 const resumeImagePath = '/resume';
@@ -54,7 +54,7 @@ const skillGroups = [
     ],
   },
   {
-    icon: FaTools,
+    icon: FaScrewdriverWrench,
     title: 'Tools and Others',
     skills: [
       ['Git and GitHub', '86%'],
